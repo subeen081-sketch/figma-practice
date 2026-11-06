@@ -1,0 +1,20 @@
+/* Figma 「이벤트표시」(276:2702). 값은 모두 tokens.css 변수를 사용합니다. */
+.event-marker {
+  display: block;
+  flex-shrink: 0;
+  width: var(--spacing-8);
+  height: var(--spacing-8);
+  border-radius: var(--radius-s);
+}
+
+.event-marker--event {
+  background-color: var(--color-calender-point1);
+}
+
+.event-marker--festival {
+  background-color: var(--color-calender-point3);
+}
+
+.event-marker--performance {
+  background-color: var(--color-calender-point2);
+}

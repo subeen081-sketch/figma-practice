@@ -1,0 +1,45 @@
+/* Figma 「사이드바」. 값은 모두 tokens.css 변수를 사용합니다. */
+/* 1440px보다 좁으면 본문을 가리므로 숨깁니다. */
+.desktop-sidebar {
+  display: none;
+  flex-direction: column;
+  gap: var(--spacing-10);
+  width: calc(var(--spacing-32) * 3 + var(--spacing-4));
+  box-shadow: var(--shadow-sidebar);
+}
+
+.desktop-sidebar__item {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-6) 0;
+  min-height: calc(var(--spacing-32) * 3 + var(--spacing-4));
+  border-radius: var(--lib-radius-s);
+  background-color: var(--lib-color-main-2);
+}
+
+.desktop-sidebar__item .life-cycle-menu-item__box {
+  height: calc(var(--spacing-32) * 2 + var(--spacing-5));
+}
+
+.desktop-sidebar__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(var(--spacing-32) + var(--spacing-16) + var(--spacing-2));
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-12);
+  background-color: var(--lib-color-primary-2);
+  cursor: pointer;
+}
+
+.desktop-sidebar__top img {
+  width: calc(var(--spacing-32) + var(--spacing-4));
+  height: calc(var(--spacing-32) + var(--spacing-4));
+}
+
+@media (min-width: 1440px) {
+  .desktop-sidebar {
+    display: flex;
+  }
+}

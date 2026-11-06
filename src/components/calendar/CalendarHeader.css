@@ -1,0 +1,41 @@
+/* Figma 「캘린더헤더」(273:2587). 값은 모두 tokens.css 변수를 사용합니다. */
+.calendar-header {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(var(--spacing-8) + var(--spacing-4));
+}
+
+.calendar-header__title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-10);
+  min-height: calc(var(--spacing-32) + var(--spacing-32) + var(--spacing-16) + var(--spacing-2));
+  font-family: var(--text-style-card-tit-desktop-font-family);
+  font-size: var(--text-style-card-tit-desktop-font-size);
+  font-weight: var(--text-style-card-tit-desktop-font-weight);
+  line-height: var(--text-style-card-tit-desktop-line-height);
+  letter-spacing: var(--text-style-card-tit-desktop-letter-spacing);
+  color: var(--lib-color-text-primary);
+  white-space: nowrap;
+}
+
+.calendar-header__button {
+  position: relative;
+  flex-shrink: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-16);
+  background: none;
+  cursor: pointer;
+}
+
+/* 눈에 보이는 크기는 시안을 따르고, 누르는 영역만 최소 44px로 넓힙니다. */
+.calendar-header__button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4));
+  height: calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4));
+  transform: translate(-50%, -50%);
+}

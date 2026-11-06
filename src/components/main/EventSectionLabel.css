@@ -1,0 +1,21 @@
+/* Figma 「의정부 행사/축제영역표시」(333:2708). 값은 모두 tokens.css 변수를 사용합니다. */
+.event-section-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25ch;
+  width: calc(var(--spacing-32) * 6 + var(--spacing-8));
+  min-height: calc(var(--spacing-32) + var(--spacing-16) + var(--spacing-2));
+  border-radius: var(--lib-radius-s);
+  background-color: var(--lib-color-primary-1);
+  font-family: var(--lib-text-style-card-botton-font-family);
+  font-size: var(--lib-text-style-card-botton-font-size);
+  font-weight: var(--lib-text-style-card-botton-font-weight);
+  line-height: var(--lib-text-style-card-botton-line-height);
+  letter-spacing: var(--lib-text-style-card-botton-letter-spacing);
+  color: var(--lib-color-text-card);
+}
+
+.event-section-label span {
+  color: var(--lib-color-text-point-3);
+}

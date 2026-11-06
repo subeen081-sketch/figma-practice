@@ -1,0 +1,17 @@
+/* Figma 「의정부시 아이콘」(338:3479). 값은 모두 tokens.css 변수를 사용합니다. */
+.city-logo {
+  width: calc(var(--spacing-32) * 3 + var(--spacing-16) + var(--spacing-5));
+  height: calc(var(--spacing-32) + var(--spacing-8));
+}
+
+/* 데스크탑 머리말: 158px × 54px */
+.city-logo--desktop {
+  width: calc(var(--spacing-32) * 4 + var(--spacing-16) + var(--spacing-10));
+  height: calc(var(--spacing-32) + var(--spacing-16) + var(--spacing-6));
+}
+
+/* 데스크탑 푸터: 165px × 56px */
+.city-logo--footer {
+  width: calc(var(--spacing-32) * 5 + var(--spacing-5));
+  height: calc(var(--spacing-32) + var(--spacing-16) + var(--spacing-8));
+}

@@ -1,0 +1,23 @@
+/* Figma 「시장실바로가기버튼」(397:4556). 값은 모두 tokens.css 변수를 사용합니다. */
+.mayor-office-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-10);
+  min-height: calc(var(--spacing-32) + var(--spacing-16) + var(--spacing-5));
+  padding: 0 calc(var(--spacing-16) + var(--spacing-2)) 0 var(--spacing-10);
+  border-radius: 0 calc(var(--lib-radius-l) * 3) 0 var(--lib-radius-s);
+  background: var(--gradient-mayor-button);
+  font-family: var(--lib-text-style-head-menu2-font-family);
+  font-size: var(--lib-text-style-head-menu2-font-size);
+  font-weight: var(--lib-text-style-head-menu2-font-weight);
+  line-height: var(--lib-text-style-head-menu2-line-height);
+  letter-spacing: var(--lib-text-style-head-menu2-letter-spacing);
+  color: var(--lib-color-text-card);
+  white-space: nowrap;
+}
+
+.mayor-office-button__mark {
+  width: calc(var(--spacing-5) + var(--spacing-2));
+  height: var(--spacing-8);
+  background-color: var(--lib-color-text-card);
+}

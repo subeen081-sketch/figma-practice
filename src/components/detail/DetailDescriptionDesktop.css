@@ -1,0 +1,20 @@
+/* Figma 「상세설명-데스크탑」(424:6745). 값은 모두 tokens.css 변수를 사용합니다. 동작은 DetailInfo와 같습니다. */
+
+/* 닫힘: 전체 높이 70px */
+.detail-description-desktop.detail-info--closed .detail-info__button {
+  min-height: calc(var(--spacing-32) + var(--spacing-32) + var(--spacing-4));
+}
+
+/* 열림: 내용과 접기 버튼 사이 121px */
+.detail-description-desktop.detail-info--open {
+  gap: calc(var(--spacing-32) * 3 + var(--spacing-16) + var(--spacing-5) + var(--spacing-4));
+  padding: calc(var(--spacing-8) + var(--spacing-5)) var(--spacing-10);
+}
+
+.detail-description-desktop .detail-info__content {
+  font-family: var(--text-style-label-2-desk-font-family);
+  font-size: var(--text-style-label-2-desk-font-size);
+  font-weight: var(--text-style-label-2-desk-font-weight);
+  line-height: var(--text-style-label-2-desk-line-height);
+  letter-spacing: var(--text-style-label-2-desk-letter-spacing);
+}

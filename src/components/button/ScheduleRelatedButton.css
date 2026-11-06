@@ -1,0 +1,37 @@
+/* Figma 「일정관련버튼」(422:4841). 값은 모두 tokens.css 변수를 사용합니다. */
+.schedule-related-button {
+  position: relative;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: var(--text-style-maincard-des-font-family);
+  font-size: var(--text-style-maincard-des-font-size);
+  font-weight: var(--text-style-maincard-des-font-weight);
+  line-height: var(--text-style-maincard-des-line-height);
+  letter-spacing: var(--text-style-maincard-des-letter-spacing);
+  color: var(--lib-color-text-primary);
+  white-space: nowrap;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* 눈에 보이는 크기는 시안을 따르고, 누르는 영역만 최소 44px로 넓힙니다. */
+.schedule-related-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4));
+  transform: translateY(-50%);
+}
+
+/* 높이 36px */
+.schedule-related-button--check {
+  min-height: calc(var(--spacing-32) + var(--spacing-4));
+}
+
+/* 높이 40px */
+.schedule-related-button--all {
+  min-height: calc(var(--spacing-32) + var(--spacing-8));
+}

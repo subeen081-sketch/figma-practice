@@ -1,0 +1,54 @@
+/* Figma 「카드」(422:4549). 값은 모두 tokens.css 변수를 사용합니다. 카드 폭은 부모가 정합니다. */
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* 메인페이지: 폭 250px ~ 300px */
+.card--main {
+  gap: var(--spacing-16);
+  min-width: calc(var(--spacing-32) * 7 + var(--spacing-16) + var(--spacing-10));
+  max-width: calc(var(--spacing-32) * 9 + var(--spacing-8) + var(--spacing-4));
+}
+
+/* 완성화면 기준: 제목과 날짜 사이 16px */
+.card--main .card-description-desktop {
+  gap: var(--spacing-16);
+}
+
+/* 캘린더: 이미지 300px 옆에 설명, 좁으면 설명이 아래로 내려갑니다. */
+.card--calendar {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.card--calendar .card__view {
+  width: calc(var(--spacing-32) * 9 + var(--spacing-8) + var(--spacing-4));
+}
+
+/* 그리드 */
+.card--grid {
+  gap: var(--spacing-8);
+}
+
+/* 시안의 메인 카드 이미지는 폭 280px로 고정입니다. */
+.card--main .card__view {
+  width: calc(var(--spacing-32) * 8 + var(--spacing-16) + var(--spacing-8));
+}
+
+/* 시안의 말줄임: 그리드는 제목 두 줄과 장소 한 줄입니다. */
+.card--grid .card-description-desktop__title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.card--grid .card-description-desktop__text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

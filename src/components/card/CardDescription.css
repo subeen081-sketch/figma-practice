@@ -1,0 +1,26 @@
+/* Figma 「카드설명」(282:3791). 값은 모두 tokens.css 변수를 사용합니다. */
+.card-description {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  width: 100%;
+  padding: 0 var(--spacing-8);
+  color: var(--lib-color-text-primary);
+  overflow-wrap: break-word;
+}
+
+.card-description__title {
+  font-family: var(--text-style-body-tit-font-family);
+  font-size: var(--text-style-body-tit-font-size);
+  font-weight: var(--text-style-body-tit-font-weight);
+  line-height: var(--text-style-body-tit-line-height);
+  letter-spacing: var(--text-style-body-tit-letter-spacing);
+}
+
+.card-description__text {
+  font-family: var(--text-style-body-des-font-family);
+  font-size: var(--text-style-body-des-font-size);
+  font-weight: var(--text-style-body-des-font-weight);
+  line-height: var(--text-style-body-des-line-height);
+  letter-spacing: var(--text-style-body-des-letter-spacing);
+}

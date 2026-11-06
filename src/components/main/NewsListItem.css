@@ -1,0 +1,48 @@
+/* Figma 「SNS아이콘/새소식 목록」(397:6156). 값은 모두 tokens.css 변수를 사용합니다. */
+.news-list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  min-height: calc(var(--spacing-32) + var(--spacing-4));
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.news-list-item__department {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-width: calc(var(--spacing-32) * 3 + var(--spacing-8) + 1px);
+  min-height: calc(var(--spacing-32) + var(--spacing-4));
+  padding: var(--spacing-8) calc(var(--spacing-10) + var(--spacing-2));
+  border-radius: var(--lib-radius-m);
+  background-color: var(--lib-color-boder-boder);
+  font-family: var(--lib-text-style-head-menu2-font-family);
+  font-size: var(--lib-text-style-head-menu2-font-size);
+  font-weight: var(--lib-text-style-head-menu2-font-weight);
+  line-height: var(--lib-text-style-head-menu2-line-height);
+  letter-spacing: var(--lib-text-style-head-menu2-letter-spacing);
+  color: var(--lib-color-text-primary);
+}
+
+.news-list-item__title {
+  font-family: var(--lib-text-style-card-title-font-family);
+  font-size: var(--lib-text-style-card-title-font-size);
+  font-weight: var(--lib-text-style-card-title-font-weight);
+  line-height: var(--lib-text-style-card-title-line-height);
+  letter-spacing: var(--lib-text-style-card-title-letter-spacing);
+  color: var(--lib-color-text-primary);
+  overflow: hidden;
+}
+
+.news-list-item__date {
+  flex: 0 0 auto;
+  margin-left: auto;
+  font-family: var(--lib-text-style-head-menu2-font-family);
+  font-size: var(--lib-text-style-head-menu2-font-size);
+  font-weight: var(--lib-text-style-head-menu2-font-weight);
+  line-height: var(--lib-text-style-head-menu2-line-height);
+  letter-spacing: var(--lib-text-style-head-menu2-letter-spacing);
+  color: var(--lib-color-main-menu);
+}

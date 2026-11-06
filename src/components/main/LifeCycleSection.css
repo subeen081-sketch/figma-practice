@@ -1,0 +1,101 @@
+/* Figma 「메인2영역」(459:8670). 값은 모두 tokens.css 변수를 사용합니다. */
+.life-cycle-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--spacing-32) + var(--spacing-16) + var(--spacing-8));
+  padding: calc(var(--spacing-32) * 2) 0;
+  background-color: var(--lib-color-main-1);
+}
+
+.life-cycle-section__intro {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-16) + var(--spacing-10) + var(--spacing-4));
+}
+
+.life-cycle-section__icon {
+  position: relative;
+  display: block;
+  width: calc(var(--spacing-32) * 4 + var(--spacing-10) + var(--spacing-2));
+  height: calc(var(--spacing-32) * 3 + 1px);
+  overflow: hidden;
+}
+
+.life-cycle-section__icon img {
+  position: absolute;
+  max-width: none;
+}
+
+.life-cycle-section__title {
+  font-family: var(--lib-text-style-bold-font-family);
+  font-size: var(--lib-text-style-bold-font-size);
+  font-weight: var(--lib-text-style-bold-font-weight);
+  line-height: var(--lib-text-style-bold-line-height);
+  letter-spacing: var(--lib-text-style-bold-letter-spacing);
+  color: var(--lib-color-text-primary);
+}
+
+.life-cycle-section__title span {
+  color: var(--lib-color-text-point-2);
+}
+
+.life-cycle-section__card {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-32) + var(--spacing-10) + var(--spacing-4));
+  width: calc(var(--spacing-32) * 28 + var(--spacing-16) + var(--spacing-10) + var(--spacing-2));
+  border-radius: var(--lib-radius-s);
+  background-color: var(--lib-color-main-2);
+  box-shadow: var(--shadow-life-cycle);
+}
+
+.life-cycle-section__tabs {
+  display: flex;
+  border-bottom: 1px solid var(--lib-color-primary-1);
+}
+
+.life-cycle-section__tabs button {
+  flex: 1;
+  min-height: calc(var(--spacing-32) + var(--spacing-16) + var(--spacing-6));
+  padding: 0;
+  border: 0;
+  border-radius: var(--lib-radius-s);
+  background: none;
+  font-family: var(--lib-text-style-card-botton-font-family);
+  font-size: var(--lib-text-style-card-botton-font-size);
+  font-weight: var(--lib-text-style-card-botton-font-weight);
+  line-height: var(--lib-text-style-card-botton-line-height);
+  letter-spacing: var(--lib-text-style-card-botton-letter-spacing);
+  color: var(--lib-color-text-primary);
+  cursor: pointer;
+}
+
+.life-cycle-section__tabs .life-cycle-section__tab--active {
+  background-color: var(--lib-color-primary-1);
+  color: var(--lib-color-text-card);
+}
+
+.life-cycle-section__people {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  min-height: calc(var(--spacing-32) * 6 + var(--spacing-10) + var(--spacing-5));
+}
+
+.life-cycle-section__people a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--spacing-16) + 1px);
+  font-family: var(--lib-text-style-main-menu-font-family);
+  font-size: var(--lib-text-style-main-menu-font-size);
+  font-weight: var(--lib-text-style-main-menu-font-weight);
+  line-height: var(--lib-text-style-main-menu-line-height);
+  letter-spacing: var(--lib-text-style-main-menu-letter-spacing);
+  color: var(--lib-color-text-primary);
+}
+
+.life-cycle-section__people img {
+  width: auto;
+  height: calc(var(--spacing-32) * 4 + var(--spacing-16) + var(--spacing-8));
+}

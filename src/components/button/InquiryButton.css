@@ -1,0 +1,28 @@
+/* Figma 「문의하기버튼」(424:6693). 값은 모두 tokens.css 변수를 사용합니다. 시안 크기는 160px × 60px입니다. */
+.inquiry-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: calc(var(--spacing-32) * 5);
+  min-height: calc(var(--spacing-32) + var(--spacing-16) + var(--spacing-8) + var(--spacing-4));
+  border-radius: var(--radius-s);
+  background-color: var(--color-primary-1);
+  font-family: var(--text-style-maincard-des-font-family);
+  font-size: var(--text-style-maincard-des-font-size);
+  font-weight: var(--text-style-maincard-des-font-weight);
+  line-height: var(--text-style-maincard-des-line-height);
+  letter-spacing: var(--text-style-maincard-des-letter-spacing);
+  color: var(--color-text-white);
+  white-space: nowrap;
+}
+
+.inquiry-button:hover {
+  text-decoration: none;
+}
+
+/* 아이콘은 화면 폭과 상관없이 시안의 32px을 유지합니다. */
+.inquiry-button img {
+  flex-shrink: 0;
+  width: var(--spacing-32);
+  height: var(--spacing-32);
+}

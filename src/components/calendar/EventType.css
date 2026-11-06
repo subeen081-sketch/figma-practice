@@ -1,0 +1,13 @@
+/* Figma 「이벤트종류」(273:2501). 값은 모두 tokens.css 변수를 사용합니다. */
+.event-type {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-5);
+  font-family: var(--text-style-label-2-mo-font-family);
+  font-size: var(--text-style-label-2-mo-font-size);
+  font-weight: var(--text-style-label-2-mo-font-weight);
+  line-height: var(--text-style-label-2-mo-line-height);
+  letter-spacing: var(--text-style-label-2-mo-letter-spacing);
+  color: var(--color-text-black);
+  white-space: nowrap;
+}

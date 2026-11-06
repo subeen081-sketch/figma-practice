@@ -1,0 +1,10 @@
+/* Figma 「일정확인」(333:2690). 값은 모두 tokens.css 변수를 사용합니다. */
+.schedule-check {
+  font-family: var(--text-style-label-2-mo-font-family);
+  font-size: var(--text-style-label-2-mo-font-size);
+  font-weight: var(--text-style-label-2-mo-font-weight);
+  line-height: var(--text-style-label-2-mo-line-height);
+  letter-spacing: var(--text-style-label-2-mo-letter-spacing);
+  color: var(--lib-color-text-primary);
+  white-space: nowrap;
+}

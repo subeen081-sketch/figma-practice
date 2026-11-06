@@ -1,0 +1,57 @@
+/* Figma 「상단&하단 버튼」(397:4104). 값은 모두 tokens.css 변수를 사용합니다. */
+.top-bottom-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--spacing-32);
+  border: 0;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.top-bottom-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100%, calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4)));
+  height: max(100%, calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4)));
+  transform: translate(-50%, -50%);
+}
+
+.top-bottom-button--favorite {
+  gap: calc(var(--spacing-2) + 1px);
+  padding: var(--spacing-4) var(--spacing-8);
+  border-radius: var(--lib-radius-m);
+  background-color: var(--lib-color-primary-1);
+  font-family: var(--lib-text-style-head-menu2-font-family);
+  font-size: var(--lib-text-style-head-menu2-font-size);
+  font-weight: var(--lib-text-style-head-menu2-font-weight);
+  line-height: var(--lib-text-style-head-menu2-line-height);
+  letter-spacing: var(--lib-text-style-head-menu2-letter-spacing);
+  color: var(--lib-color-text-card);
+}
+
+.top-bottom-button--favorite img {
+  width: calc(var(--spacing-16) + var(--spacing-8));
+  height: calc(var(--spacing-16) + var(--spacing-8));
+}
+
+.top-bottom-button--banner {
+  gap: var(--spacing-8);
+  padding: var(--spacing-6) var(--spacing-16);
+  border-radius: var(--lib-radius-l);
+  background-color: var(--lib-color-botton-banner);
+  font-family: var(--lib-text-style-card-menu-font-family);
+  font-size: var(--lib-text-style-card-menu-font-size);
+  font-weight: var(--lib-text-style-card-menu-font-weight);
+  line-height: var(--lib-text-style-card-menu-line-height);
+  letter-spacing: var(--lib-text-style-card-menu-letter-spacing);
+  color: var(--lib-color-text-primary);
+}
+
+.top-bottom-button--banner img {
+  width: calc(var(--spacing-16) + var(--spacing-4));
+  height: calc(var(--spacing-16) + var(--spacing-4));
+}

@@ -1,0 +1,38 @@
+/* Figma 「데스크탑메인카드텍스트모음」(424:6591). 값은 모두 tokens.css 변수를 사용합니다. */
+.desktop-main-card-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-5));
+  color: var(--lib-color-text-primary);
+}
+
+.desktop-main-card-text-group__title {
+  font-family: var(--text-style-maincard-tit-desk-font-family);
+  font-size: var(--text-style-maincard-tit-desk-font-size);
+  font-weight: var(--text-style-maincard-tit-desk-font-weight);
+  line-height: var(--text-style-maincard-tit-desk-line-height);
+  letter-spacing: var(--text-style-maincard-tit-desk-letter-spacing);
+}
+
+.desktop-main-card-text-group__list {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-10) + var(--spacing-5) + var(--spacing-4));
+}
+
+.desktop-main-card-text-group__row {
+  display: flex;
+  align-items: center;
+  font-family: var(--text-style-maincard-des-desk-font-family);
+  font-size: var(--text-style-maincard-des-desk-font-size);
+  font-weight: var(--text-style-maincard-des-desk-font-weight);
+  line-height: var(--text-style-maincard-des-desk-line-height);
+  letter-spacing: var(--text-style-maincard-des-desk-letter-spacing);
+}
+
+/* 아이콘은 화면 폭과 상관없이 시안의 32px을 유지합니다. */
+.desktop-main-card-text-group__row img {
+  flex-shrink: 0;
+  width: var(--spacing-32);
+  height: var(--spacing-32);
+}

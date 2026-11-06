@@ -1,0 +1,50 @@
+/* Figma 「상세정보/검색창/콤보박스」(282:3895). 값은 모두 tokens.css 변수를 사용합니다. */
+.detail-info-search-combobox {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-10) + var(--spacing-5) + var(--spacing-4));
+  width: 100%;
+  min-height: calc(var(--spacing-32) + var(--spacing-16));
+  padding: 0 calc(var(--spacing-6) + var(--spacing-5)) 0 calc(var(--spacing-10) + var(--spacing-4));
+  border: 1px solid var(--color-calender-border2);
+  border-radius: var(--radius-s);
+  background-color: var(--color-text-white);
+}
+
+.detail-info-search-combobox__button {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4));
+  height: calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4));
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+/* 칸 크기가 고정이라 아이콘은 데스크탑에서도 24px로 유지합니다. */
+.detail-info-search-combobox__button img {
+  width: calc(var(--spacing-16) + var(--spacing-8));
+  height: calc(var(--spacing-16) + var(--spacing-8));
+}
+
+.detail-info-search-combobox__input {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: var(--text-style-label-2-mo-font-family);
+  font-size: var(--text-style-label-2-mo-font-size);
+  font-weight: var(--text-style-label-2-mo-font-weight);
+  line-height: var(--text-style-label-2-mo-line-height);
+  letter-spacing: var(--text-style-label-2-mo-letter-spacing);
+  color: var(--color-label);
+}
+
+.detail-info-search-combobox__input::placeholder {
+  color: var(--color-label);
+  opacity: 1;
+}

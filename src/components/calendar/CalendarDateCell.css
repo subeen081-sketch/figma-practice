@@ -1,0 +1,33 @@
+/* Figma 「캘린더날짜칸」(276:2706). 값은 모두 tokens.css 변수를 사용합니다. */
+.calendar-date-cell {
+  width: calc(var(--spacing-32) + var(--spacing-8));
+  height: calc(var(--spacing-32) + var(--spacing-8));
+  padding-top: calc(var(--spacing-5) - var(--spacing-4));
+  padding-left: var(--spacing-4);
+  border-bottom: 0.5px solid var(--color-calender-border);
+  font-family: var(--text-style-label-2-mo-font-family);
+  font-size: var(--text-style-label-2-mo-font-size);
+  font-weight: var(--text-style-label-2-mo-font-weight);
+  line-height: var(--text-style-label-2-mo-line-height);
+  letter-spacing: var(--text-style-label-2-mo-letter-spacing);
+}
+
+.calendar-date-cell--default {
+  color: var(--color-text-black);
+}
+
+.calendar-date-cell--saturday {
+  color: var(--color-calender-point3);
+}
+
+.calendar-date-cell--sunday {
+  color: var(--color-calender-text3);
+}
+
+.calendar-date-cell--disabled {
+  color: var(--color-calender-border);
+}
+
+.calendar-date-cell--this-week {
+  background-color: var(--color-background-box);
+}

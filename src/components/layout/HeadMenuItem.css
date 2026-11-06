@@ -1,0 +1,18 @@
+/* Figma 「헤드메뉴목록」(397:6929). 값은 모두 tokens.css 변수를 사용합니다. */
+.head-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(var(--spacing-32) + var(--spacing-5));
+  font-family: var(--lib-text-style-head-menu2-font-family);
+  font-size: var(--lib-text-style-head-menu2-font-size);
+  font-weight: var(--lib-text-style-head-menu2-font-weight);
+  line-height: var(--lib-text-style-head-menu2-line-height);
+  letter-spacing: var(--lib-text-style-head-menu2-letter-spacing);
+  color: var(--lib-color-main-menu);
+  white-space: nowrap;
+}
+
+.head-menu-item--active {
+  color: var(--lib-premitives-blue-800);
+}

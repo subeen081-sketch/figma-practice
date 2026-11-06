@@ -1,0 +1,30 @@
+/* Figma 「모바일페이지이동라벨」(355:3777). 값은 모두 tokens.css 변수를 사용합니다. */
+.mobile-page-move-label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--spacing-16) + var(--spacing-5) + var(--spacing-4) + var(--spacing-2));
+  height: calc(var(--spacing-16) + var(--spacing-5) + var(--spacing-4) + var(--spacing-2));
+  padding: 0;
+  border: 1px solid var(--color-text-black);
+  background: none;
+  cursor: pointer;
+}
+
+/* 칸 크기가 고정이라 아이콘은 데스크탑에서도 24px로 유지합니다. */
+.mobile-page-move-label img {
+  width: calc(var(--spacing-16) + var(--spacing-8));
+  height: calc(var(--spacing-16) + var(--spacing-8));
+}
+
+/* 눈에 보이는 크기는 시안을 따르고, 누르는 영역만 최소 44px로 넓힙니다. */
+.mobile-page-move-label::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4));
+  height: calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4));
+  transform: translate(-50%, -50%);
+}

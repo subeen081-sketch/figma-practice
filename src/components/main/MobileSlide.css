@@ -1,0 +1,20 @@
+/* Figma 「모바일슬라이드」(458:3779). 값은 모두 tokens.css 변수를 사용합니다. 시안 비율은 317px × 154px입니다. */
+.mobile-slide {
+  width: 100%;
+  aspect-ratio: 317 / 154;
+  overflow: hidden;
+  background-color: var(--lib-color-main-2);
+}
+
+.mobile-slide__track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.mobile-slide__track img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

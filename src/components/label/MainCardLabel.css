@@ -1,0 +1,19 @@
+/* Figma 「메인카드 라벨/다운아이콘/목록/모바일」(295:1380). 값은 모두 tokens.css 변수를 사용합니다. */
+.main-card-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-10);
+  font-family: var(--text-style-body-des-font-family);
+  font-size: var(--text-style-body-des-font-size);
+  font-weight: var(--text-style-body-des-font-weight);
+  line-height: var(--text-style-body-des-line-height);
+  letter-spacing: var(--text-style-body-des-letter-spacing);
+  color: var(--lib-color-text-primary);
+}
+
+.main-card-label__icon,
+.main-card-label img {
+  flex-shrink: 0;
+  width: calc(var(--spacing-16) + var(--spacing-8));
+  height: calc(var(--spacing-16) + var(--spacing-8));
+}

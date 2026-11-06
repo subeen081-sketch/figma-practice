@@ -1,0 +1,53 @@
+/* Figma 「데스크탑/메인상세페이지」(424:6806, 424:6975). 값은 모두 tokens.css 변수를 사용합니다. */
+.desktop-detail-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--spacing-32) + 3px);
+  padding-bottom: calc(var(--spacing-32) * 2 + var(--spacing-16) + var(--spacing-10) + var(--spacing-5));
+  background-color: var(--color-text-white);
+}
+
+.desktop-detail-page__card {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-32) + var(--spacing-6));
+  width: calc(var(--spacing-32) * 35 + var(--spacing-16) + var(--spacing-2));
+}
+
+.desktop-detail-page__poster {
+  flex-shrink: 0;
+  width: calc(var(--spacing-32) * 12 + var(--spacing-16) + var(--spacing-4) + 6px);
+}
+
+.desktop-detail-page__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calc(var(--spacing-16) + var(--spacing-8) + var(--spacing-4));
+}
+
+.desktop-detail-page__labels {
+  display: flex;
+  gap: calc(var(--spacing-16) + var(--spacing-5) + var(--spacing-4));
+}
+
+.desktop-detail-page__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--spacing-32) * 4 + var(--spacing-10));
+  width: calc(var(--spacing-32) * 35 + var(--spacing-16) + var(--spacing-2));
+}
+
+.desktop-detail-page--open .desktop-detail-page__bottom {
+  gap: calc(var(--spacing-32) * 4 + var(--spacing-5) + var(--spacing-2));
+}
+
+.desktop-detail-page--open .detail-info__content {
+  min-height: calc(var(--spacing-32) * 9);
+}
+
+.desktop-detail-page--open {
+  padding-bottom: calc(var(--spacing-32) + var(--spacing-16) + 1px);
+}

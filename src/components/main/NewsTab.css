@@ -1,0 +1,33 @@
+/* Figma 「새소식」(397:6144). 값은 모두 tokens.css 변수를 사용합니다. */
+.news-tab {
+  position: relative;
+  flex-shrink: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: var(--lib-text-style-card-botton-font-family);
+  font-size: var(--lib-text-style-card-botton-font-size);
+  font-weight: var(--lib-text-style-card-botton-font-weight);
+  line-height: var(--lib-text-style-card-botton-line-height);
+  letter-spacing: var(--lib-text-style-card-botton-letter-spacing);
+  color: var(--lib-color-main-menu);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.news-tab::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100%, calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4)));
+  height: max(100%, calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4)));
+  transform: translate(-50%, -50%);
+}
+
+.news-tab--active {
+  padding: var(--spacing-8) var(--spacing-16);
+  border-radius: var(--lib-radius-l);
+  background-color: var(--lib-color-main-box);
+  color: var(--lib-color-text-card);
+}

@@ -1,0 +1,13 @@
+/* Figma 「최상단영역」. 값은 모두 tokens.css 변수를 사용합니다. */
+.desktop-top-area {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-32) + -1px);
+  width: 100%;
+}
+
+.desktop-top-area__logo {
+  width: calc(var(--spacing-32) * 35 + var(--spacing-16) + var(--spacing-2));
+  max-width: 100%;
+  margin: 0 auto;
+}

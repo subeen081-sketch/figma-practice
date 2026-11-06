@@ -1,0 +1,102 @@
+/* Figma 「데스크탑검색바/콤보박스」(422:5338). 값은 모두 tokens.css 변수를 사용합니다. 폭은 부모가 정합니다. */
+.desktop-search-bar-combobox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: calc(var(--spacing-32) * 3 + var(--spacing-4));
+  border: 1px solid var(--color-label);
+}
+
+/* 아이콘은 화면 폭과 상관없이 시안의 32px을 유지합니다. */
+.desktop-search-bar-combobox img {
+  width: var(--spacing-32);
+  height: var(--spacing-32);
+}
+
+/* 검색창 */
+.desktop-search-bar-combobox--search {
+  gap: calc(var(--spacing-16) + var(--spacing-8));
+  padding: 0 calc(var(--spacing-10) + var(--spacing-5) + var(--spacing-4));
+}
+
+.desktop-search-bar-combobox__search-button,
+.desktop-search-bar-combobox__voice-button {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+/* 눈에 보이는 크기는 시안을 따르고, 누르는 영역만 최소 44px로 넓힙니다. */
+.desktop-search-bar-combobox__search-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4));
+  height: calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4));
+  transform: translate(-50%, -50%);
+}
+
+.desktop-search-bar-combobox__voice-button {
+  width: calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4));
+  height: calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4));
+}
+
+.desktop-search-bar-combobox__input {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: var(--text-style-label-2-desk-font-family);
+  font-size: var(--text-style-label-2-desk-font-size);
+  font-weight: var(--lib-text-textweight-700);
+  line-height: var(--text-style-label-2-desk-line-height);
+  letter-spacing: var(--text-style-label-2-desk-letter-spacing);
+  color: var(--lib-color-text-primary);
+}
+
+.desktop-search-bar-combobox__input::placeholder {
+  color: var(--lib-color-text-primary);
+  opacity: 1;
+}
+
+/* 콤보박스: 화살표 오른쪽 여백 28px, 그리드는 32px */
+.desktop-search-bar-combobox--combobox {
+  --desktop-combobox-side: calc(var(--spacing-16) + var(--spacing-8) + var(--spacing-4));
+}
+
+.desktop-search-bar-combobox--combobox.desktop-search-bar-combobox--grid {
+  --desktop-combobox-side: var(--spacing-32);
+}
+
+.desktop-search-bar-combobox__select {
+  align-self: stretch;
+  width: 100%;
+  padding: 0 calc(var(--desktop-combobox-side) + var(--spacing-32) + var(--spacing-8)) 0 var(--desktop-combobox-side);
+  border: 0;
+  background: none;
+  appearance: none;
+  font-family: var(--text-style-label-2-desk-font-family);
+  font-size: var(--text-style-label-2-desk-font-size);
+  font-weight: var(--text-style-label-2-desk-font-weight);
+  line-height: var(--text-style-label-2-desk-line-height);
+  letter-spacing: var(--text-style-label-2-desk-letter-spacing);
+  color: var(--lib-color-text-primary);
+  cursor: pointer;
+}
+
+.desktop-search-bar-combobox__arrow {
+  position: absolute;
+  top: 50%;
+  right: var(--desktop-combobox-side);
+  transform: translateY(-50%);
+  pointer-events: none;
+}

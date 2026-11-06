@@ -1,0 +1,38 @@
+/* Figma 「모바일sns슬라이드」(397:6277). 값은 모두 tokens.css 변수를 사용합니다. */
+.sns-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.sns-tabs__tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(var(--spacing-32) + var(--spacing-10) + 1px);
+  padding: 0;
+  border: 0;
+  border-radius: var(--lib-radius-s);
+  background: none;
+  cursor: pointer;
+}
+
+.sns-tabs__tab--active {
+  background-color: var(--lib-color-main-click-click);
+}
+
+.sns-tabs__icon {
+  display: block;
+  height: calc(var(--spacing-16) + var(--spacing-8));
+  background-repeat: no-repeat;
+}
+
+/* 데스크탑: 40px 칸 */
+.sns-tabs--large {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sns-tabs--large .sns-tabs__tab {
+  width: calc(var(--spacing-32) + var(--spacing-8));
+  min-height: calc(var(--spacing-32) + var(--spacing-8));
+}

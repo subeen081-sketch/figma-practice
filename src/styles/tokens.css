@@ -1,0 +1,395 @@
+/*
+ * 디자인 토큰: Figma 「공공사이트개선」(zTXzU0vK1FnehvHMx0a6uR)에서 읽은 값입니다.
+ *
+ * 이름 규칙
+ *   --{컬렉션}-{변수}       이 파일(로컬)의 변수. 예) COLOR > PRIMARY/1 → --color-primary-1
+ *   --lib-{컬렉션}-{변수}   외부 라이브러리 변수. 로컬과 이름이 같아도 값이 다를 수 있습니다.
+ *   Figma 철자를 그대로 따릅니다. (PREMITIVES, CALENDER, BODER, BOTTON, BAGIE)
+ *
+ * 단위
+ *   글자 크기와 라운드는 1rem = 16px 기준으로 정확히 환산했습니다. 원래 px은 주석에 있습니다.
+ *   소수 rgb() 색상은 Figma 원본값이 정수가 아니어서 그대로 옮긴 값입니다.
+ *
+ * 사용 기준
+ *   로컬과 외부 라이브러리 값이 다르면, 시안의 해당 요소가 쓰는 값을 그대로 씁니다.
+ *   시안에서 변수 없이 #000000으로 쓰인 글자색은 --lib-color-text-primary를 씁니다.
+ *
+ * 간격, 그림자, 라운드 12·16은 Figma 변수가 없어, 시안에서 반복되는 값을 그대로 옮겼습니다.
+ * 행간 전용 토큰은 없으며, 텍스트 스타일의 line-height를 씁니다.
+ *
+ * 폰트 파일: Pretendard GOV는 styles/fonts.css(src/fonts), Pretendard와 Noto Sans KR은 index.html(CDN)에서 불러옵니다.
+ */
+
+:root {
+  /* 컬러: 기본 팔레트 (COLOR PREMITIVES) */
+  --color-premitives-blue-50: #f1fcfc;
+  --color-premitives-blue-100: #f2fafa;
+  --color-premitives-blue-200: #f0f8fc;
+  --color-premitives-blue-300: #d8fdff;
+  --color-premitives-blue-400: #1f95ea;
+  --color-premitives-blue-600: rgb(17.729290053248405 107.22000181674957 230.48076689243317); /* Figma 화면 표시값 #126BE6 */
+  --color-premitives-blue-700: #27729a;
+  --color-premitives-blue-800: #3d627a;
+  --color-premitives-black-100: #dddddd;
+  --color-premitives-black-400: #696969;
+  --color-premitives-black-500: #555555;
+  --color-premitives-black-700: #4e4e4e;
+  --color-premitives-black-900: #222222;
+  --color-premitives-white-900: #ffffff;
+  --color-premitives-red-600: rgb(225.57691723108292 34.70414198935032 45.30818738043308); /* Figma 화면 표시값 #E2232D */
+  --color-premitives-red-700: #d32532;
+  --color-premitives-green-200: #00b1ce;
+  --color-premitives-green-300: #08a093;
+  --color-premitives-green-400: rgb(69.80907887220383 115.24038344621658 69.80907887220383); /* Figma 화면 표시값 #467346 */
+  --color-premitives-green-600: #008196;
+  --color-premitives-pink-700: rgb(218.22115033864975 2.0982804195955396 133.0818548798561); /* Figma 화면 표시값 #DA0285 */
+  --color-premitives-yellow-100: #fffee6;
+
+  /* 컬러: 의미별 (COLOR) */
+  --color-calender-point1: var(--color-premitives-pink-700);
+  --color-calender-point2: var(--color-premitives-green-400);
+  --color-calender-point3: var(--color-premitives-blue-600);
+  --color-calender-text1: var(--color-premitives-black-500);
+  --color-calender-text2: var(--color-premitives-red-700);
+  --color-calender-text3: var(--color-premitives-red-600);
+  --color-calender-text4: var(--color-premitives-blue-400);
+  --color-calender-border: var(--color-premitives-black-100);
+  --color-calender-border2: var(--color-premitives-black-400);
+  --color-text-black: var(--color-premitives-black-900);
+  --color-text-white: var(--color-premitives-white-900);
+  --color-primary-1: var(--color-premitives-green-600);
+  --color-primary-2: var(--color-premitives-green-200);
+  --color-background-box: var(--color-premitives-yellow-100);
+  --color-label: var(--color-premitives-black-700);
+
+  /* 컬러: 색상 스타일 (Foundation/Green) */
+  --color-foundation-green-light: #e6f6f4;
+  --color-foundation-green-light-hover: #d9f2ef;
+  --color-foundation-green-light-active: #b0e4dd;
+  --color-foundation-green-normal: #00a991;
+  --color-foundation-green-normal-hover: #009883;
+  --color-foundation-green-normal-active: #008774;
+  --color-foundation-green-dark: #007f6d;
+  --color-foundation-green-dark-hover: #006557;
+  --color-foundation-green-dark-active: #004c41;
+  --color-foundation-green-darker: #003b33;
+
+  /* 컬러: 외부 라이브러리 기본 팔레트 (PREMITIVES, 완성화면 사용분) */
+  --lib-premitives-black-900: #000000;
+  --lib-premitives-white-50: #fffef9;
+  --lib-premitives-white-900: #ffffff;
+  --lib-premitives-gray-200: #dddddd;
+  --lib-premitives-gray-400: #777777;
+  --lib-premitives-gray-500: #666666;
+  --lib-premitives-bagie-100: #ebebeb;
+  --lib-premitives-blue-100: #f3fafb;
+  --lib-premitives-blue-200: #e7f4ff;
+  --lib-premitives-blue-300: #d8fdff;
+  --lib-premitives-blue-400: #00b1ce;
+  --lib-premitives-blue-600: #008196;
+  --lib-premitives-blue-700: #2d7ac6;
+  --lib-premitives-blue-800: #27729a;
+  --lib-premitives-blue-900: #0b2951;
+  --lib-premitives-red-400: #ee5750;
+  --lib-premitives-red-500: #f44242;
+  --lib-premitives-purple-500: #5643cb;
+
+  /* 컬러: 외부 라이브러리 의미별 (COLOR, 완성화면 사용분) */
+  --lib-color-primary-1: var(--lib-premitives-blue-600);
+  --lib-color-primary-2: var(--lib-premitives-blue-400);
+  --lib-color-text-primary: var(--lib-premitives-black-900);
+  --lib-color-text-card: var(--lib-premitives-white-900);
+  --lib-color-text-point-1: var(--lib-premitives-purple-500);
+  --lib-color-text-point-2: var(--lib-premitives-red-500);
+  --lib-color-text-point-3: var(--lib-premitives-blue-300);
+  --lib-color-text-point-4: var(--lib-premitives-blue-700);
+  --lib-color-main-1: var(--lib-premitives-white-50);
+  --lib-color-main-2: var(--lib-premitives-white-900);
+  --lib-color-main-box: var(--lib-premitives-red-400);
+  --lib-color-main-menu: var(--lib-premitives-gray-400);
+  --lib-color-main-click-click: var(--lib-premitives-blue-200);
+  --lib-color-head-background: var(--lib-premitives-blue-100);
+  --lib-color-head-box: var(--lib-premitives-gray-500);
+  --lib-color-boder-boder: var(--lib-premitives-gray-200);
+  --lib-color-botton-banner: var(--lib-premitives-bagie-100); /* Figma 이름: BOTTON/배너 */
+  --lib-color-footer-footer: var(--lib-premitives-blue-900);
+  --lib-color-footer-footer2: var(--lib-premitives-blue-800);
+
+  /* 폰트: 패밀리 (텍스트 스타일에서 사용) */
+  --font-family-pretendard-gov: "Pretendard GOV";
+  --font-family-noto-sans-kr: "Noto Sans KR";
+  --font-family-pretendard: "Pretendard";
+
+  /* 폰트: 크기 (TEXT PREMITIVES) */
+  --text-premitives-textsize-16: 1rem; /* 16px */
+  --text-premitives-textsize-17: 1.0625rem; /* 17px */
+  --text-premitives-textsize-18: 1.125rem; /* 18px */
+  --text-premitives-textsize-19: 1.1875rem; /* 19px */
+  --text-premitives-textsize-20: 1.25rem; /* 20px */
+  --text-premitives-textsize-22: 1.375rem; /* 22px */
+  --text-premitives-textsize-24: 1.5rem; /* 24px */
+  --text-premitives-textsize-30: 1.875rem; /* 30px */
+  --text-premitives-textsize-32: 2rem; /* 32px */
+  --text-premitives-textsize-38: 2.375rem; /* 38px */
+  --text-premitives-textsize-40: 2.5rem; /* 40px */
+  --text-premitives-textsize-60: 3.75rem; /* 60px */
+
+  /* 폰트: 굵기 (TEXT PREMITIVES) */
+  --text-premitives-textweight-400: 400;
+  --text-premitives-textweight-600: 600;
+  --text-premitives-textweight-800: 800;
+
+  /* 폰트: 의미별 크기 (TEXT, MOBILE 모드 값이 기본) */
+  --text-size-body-des: var(--text-premitives-textsize-17);
+  --text-size-body-title: var(--text-premitives-textsize-19);
+  --text-size-label-label: var(--text-premitives-textsize-16);
+  --text-size-maincard-des: var(--text-premitives-textsize-22);
+  --text-size-maincard-title: var(--text-premitives-textsize-30);
+  --text-size-card-title: var(--text-premitives-textsize-30);
+  --text-size-card-des: var(--text-premitives-textsize-22);
+
+  /* 폰트: 의미별 굵기 (TEXT, MOBILE과 DESKTOP 값이 같음) */
+  --text-weight-body-des: var(--text-premitives-textweight-400);
+  --text-weight-body-title: var(--text-premitives-textweight-800);
+  --text-weight-label-label: var(--text-premitives-textweight-400);
+  --text-weight-maincard-des: var(--text-premitives-textweight-600);
+  --text-weight-maincard-title: var(--text-premitives-textweight-800);
+  --text-weight-card-title: var(--text-premitives-textweight-600);
+  --text-weight-card-des: var(--text-premitives-textweight-400);
+
+  /* 폰트: 외부 라이브러리 크기 (TEXT, 완성화면 사용분) */
+  --lib-text-textweight-size-12: 0.75rem; /* 12px */
+  --lib-text-textweight-size-14: 0.875rem; /* 14px */
+  --lib-text-textweight-size-15: 0.9375rem; /* 15px */
+  --lib-text-textweight-size-16: 1rem; /* 16px */
+  --lib-text-textweight-size-18: 1.125rem; /* 18px */
+  --lib-text-textweight-size-20: 1.25rem; /* 20px */
+  --lib-text-textweight-size-24: 1.5rem; /* 24px */
+  --lib-text-textweight-size-40: 2.5rem; /* 40px */
+
+  /* 폰트: 외부 라이브러리 굵기 (TEXT, 완성화면 사용분) */
+  --lib-text-textweight-500: 500;
+  --lib-text-textweight-700: 700;
+  --lib-text-textweight-800: 800;
+  --lib-text-textweight-900: 900;
+
+  /* 텍스트 스타일 (로컬) */
+
+  --text-style-body-tit-font-family: var(--font-family-pretendard-gov);
+  --text-style-body-tit-font-size: 1.1875rem; /* 19px */
+  --text-style-body-tit-font-weight: 600;
+  --text-style-body-tit-line-height: normal; /* Figma Auto */
+  --text-style-body-tit-letter-spacing: 0;
+
+  --text-style-body-des-font-family: var(--font-family-pretendard-gov);
+  --text-style-body-des-font-size: 1.0625rem; /* 17px */
+  --text-style-body-des-font-weight: 400;
+  --text-style-body-des-line-height: normal; /* Figma Auto */
+  --text-style-body-des-letter-spacing: 0;
+
+  --text-style-card-tit-desktop-font-family: var(--font-family-pretendard-gov);
+  --text-style-card-tit-desktop-font-size: 1.875rem; /* 30px */
+  --text-style-card-tit-desktop-font-weight: 600;
+  --text-style-card-tit-desktop-line-height: normal; /* Figma Auto */
+  --text-style-card-tit-desktop-letter-spacing: 0;
+
+  --text-style-card-des-font-family: var(--font-family-pretendard-gov);
+  --text-style-card-des-font-size: 1.375rem; /* 22px */
+  --text-style-card-des-font-weight: 400;
+  --text-style-card-des-line-height: normal; /* Figma Auto */
+  --text-style-card-des-letter-spacing: 0;
+
+  --text-style-label-mo-font-family: var(--font-family-pretendard-gov);
+  --text-style-label-mo-font-size: 1rem; /* 16px */
+  --text-style-label-mo-font-weight: 400;
+  --text-style-label-mo-line-height: normal; /* Figma Auto */
+  --text-style-label-mo-letter-spacing: 0;
+
+  --text-style-maincard-tit-font-family: var(--font-family-pretendard-gov);
+  --text-style-maincard-tit-font-size: 1.875rem; /* 30px */
+  --text-style-maincard-tit-font-weight: 800;
+  --text-style-maincard-tit-line-height: normal; /* Figma Auto */
+  --text-style-maincard-tit-letter-spacing: 0;
+
+  --text-style-maincard-des-font-family: var(--font-family-pretendard-gov);
+  --text-style-maincard-des-font-size: 1.875rem; /* 30px */
+  --text-style-maincard-des-font-weight: 600;
+  --text-style-maincard-des-line-height: normal; /* Figma Auto */
+  --text-style-maincard-des-letter-spacing: 0;
+
+  --text-style-label-2-mo-font-family: var(--font-family-pretendard-gov);
+  --text-style-label-2-mo-font-size: 1rem; /* 16px */
+  --text-style-label-2-mo-font-weight: 600;
+  --text-style-label-2-mo-line-height: normal; /* Figma Auto */
+  --text-style-label-2-mo-letter-spacing: 0;
+
+  --text-style-label-2-desk-font-family: var(--font-family-pretendard-gov);
+  --text-style-label-2-desk-font-size: 1.25rem; /* 20px */
+  --text-style-label-2-desk-font-weight: 400;
+  --text-style-label-2-desk-line-height: normal; /* Figma Auto */
+  --text-style-label-2-desk-letter-spacing: 0;
+
+  --text-style-card-title-font-family: var(--font-family-pretendard-gov);
+  --text-style-card-title-font-size: 1.875rem; /* 30px */
+  --text-style-card-title-font-weight: 800;
+  --text-style-card-title-line-height: normal; /* Figma Auto */
+  --text-style-card-title-letter-spacing: 0;
+
+  --text-style-card-des-desk-font-family: var(--font-family-pretendard-gov);
+  --text-style-card-des-desk-font-size: 1.5rem; /* 24px */
+  --text-style-card-des-desk-font-weight: 400;
+  --text-style-card-des-desk-line-height: normal; /* Figma Auto */
+  --text-style-card-des-desk-letter-spacing: 0;
+
+  --text-style-maincard-tit-desk-font-family: var(--font-family-pretendard-gov);
+  --text-style-maincard-tit-desk-font-size: 3.75rem; /* 60px */
+  --text-style-maincard-tit-desk-font-weight: 600;
+  --text-style-maincard-tit-desk-line-height: normal; /* Figma Auto */
+  --text-style-maincard-tit-desk-letter-spacing: 0;
+
+  --text-style-maincard-des-desk-font-family: var(--font-family-pretendard-gov);
+  --text-style-maincard-des-desk-font-size: 2.5rem; /* 40px */
+  --text-style-maincard-des-desk-font-weight: 400;
+  --text-style-maincard-des-desk-line-height: normal; /* Figma Auto */
+  --text-style-maincard-des-desk-letter-spacing: 0;
+
+  --text-style-label-desk-font-family: var(--font-family-pretendard-gov);
+  --text-style-label-desk-font-size: 1.0625rem; /* 17px */
+  --text-style-label-desk-font-weight: 400;
+  --text-style-label-desk-line-height: normal; /* Figma Auto */
+  --text-style-label-desk-letter-spacing: 0;
+
+  /* 텍스트 스타일 (외부 라이브러리, 완성화면 사용분) */
+
+  --lib-text-style-head-menu1-font-family: var(--font-family-noto-sans-kr);
+  --lib-text-style-head-menu1-font-size: 1.125rem; /* 18px */
+  --lib-text-style-head-menu1-font-weight: 800;
+  --lib-text-style-head-menu1-line-height: normal; /* Figma Auto */
+  --lib-text-style-head-menu1-letter-spacing: 0;
+
+  --lib-text-style-head-menu2-font-family: var(--font-family-noto-sans-kr);
+  --lib-text-style-head-menu2-font-size: 0.875rem; /* 14px */
+  --lib-text-style-head-menu2-font-weight: 500;
+  --lib-text-style-head-menu2-line-height: normal; /* Figma Auto */
+  --lib-text-style-head-menu2-letter-spacing: 0;
+
+  --lib-text-style-main-menu-font-family: var(--font-family-noto-sans-kr);
+  --lib-text-style-main-menu-font-size: 0.9375rem; /* 15px */
+  --lib-text-style-main-menu-font-weight: 500;
+  --lib-text-style-main-menu-line-height: normal; /* Figma Auto */
+  --lib-text-style-main-menu-letter-spacing: 0;
+
+  --lib-text-style-main-botton-font-family: var(--font-family-noto-sans-kr);
+  --lib-text-style-main-botton-font-size: 1.25rem; /* 20px */
+  --lib-text-style-main-botton-font-weight: 800;
+  --lib-text-style-main-botton-line-height: normal; /* Figma Auto */
+  --lib-text-style-main-botton-letter-spacing: 0;
+
+  --lib-text-style-card-title-font-family: var(--font-family-noto-sans-kr);
+  --lib-text-style-card-title-font-size: 1rem; /* 16px */
+  --lib-text-style-card-title-font-weight: 500;
+  --lib-text-style-card-title-line-height: normal; /* Figma Auto */
+  --lib-text-style-card-title-letter-spacing: 0;
+
+  --lib-text-style-card-dec-font-family: var(--font-family-noto-sans-kr);
+  --lib-text-style-card-dec-font-size: 1rem; /* 16px */
+  --lib-text-style-card-dec-font-weight: 500;
+  --lib-text-style-card-dec-line-height: normal; /* Figma Auto */
+  --lib-text-style-card-dec-letter-spacing: 0;
+
+  --lib-text-style-card-menu-font-family: var(--font-family-noto-sans-kr);
+  --lib-text-style-card-menu-font-size: 0.875rem; /* 14px */
+  --lib-text-style-card-menu-font-weight: 700;
+  --lib-text-style-card-menu-line-height: normal; /* Figma Auto */
+  --lib-text-style-card-menu-letter-spacing: 0;
+
+  --lib-text-style-card-botton-font-family: var(--font-family-noto-sans-kr);
+  --lib-text-style-card-botton-font-size: 1.125rem; /* 18px */
+  --lib-text-style-card-botton-font-weight: 700;
+  --lib-text-style-card-botton-line-height: normal; /* Figma Auto */
+  --lib-text-style-card-botton-letter-spacing: 0;
+
+  --lib-text-style-card-sec-botton-font-family: var(--font-family-pretendard);
+  --lib-text-style-card-sec-botton-font-size: 1.5rem; /* 24px */
+  --lib-text-style-card-sec-botton-font-weight: 500;
+  --lib-text-style-card-sec-botton-line-height: normal; /* Figma Auto */
+  --lib-text-style-card-sec-botton-letter-spacing: 0;
+
+  --lib-text-style-footer-menu-font-family: var(--font-family-noto-sans-kr);
+  --lib-text-style-footer-menu-font-size: 1rem; /* 16px */
+  --lib-text-style-footer-menu-font-weight: 700;
+  --lib-text-style-footer-menu-line-height: 3.6875rem; /* 59px */
+  --lib-text-style-footer-menu-letter-spacing: 0;
+
+  --lib-text-style-poster-dec-font-family: var(--font-family-noto-sans-kr);
+  --lib-text-style-poster-dec-font-size: 1.25rem; /* 20px */
+  --lib-text-style-poster-dec-font-weight: 500;
+  --lib-text-style-poster-dec-line-height: normal; /* Figma Auto */
+  --lib-text-style-poster-dec-letter-spacing: 0;
+
+  --lib-text-style-label-font-family: var(--font-family-pretendard);
+  --lib-text-style-label-font-size: 0.75rem; /* 12px */
+  --lib-text-style-label-font-weight: 500;
+  --lib-text-style-label-line-height: normal; /* Figma Auto */
+  --lib-text-style-label-letter-spacing: 0;
+
+  /* Figma 이름: BOLD체 */
+  --lib-text-style-bold-font-family: var(--font-family-pretendard);
+  --lib-text-style-bold-font-size: 2.5rem; /* 40px */
+  --lib-text-style-bold-font-weight: 900;
+  --lib-text-style-bold-line-height: normal; /* Figma Auto */
+  --lib-text-style-bold-letter-spacing: 0;
+
+  /* 라운드 (RADIUS) */
+  --radius-s: 0.25rem; /* 4px */
+
+  /* 라운드: 외부 라이브러리 (RADIUS, 완성화면 사용분) */
+  --lib-radius-s: 0.3125rem; /* 5px */
+  --lib-radius-m: 0.9375rem; /* 15px */
+  --lib-radius-l: 1.25rem; /* 20px */
+
+  /* 라운드: Figma 변수 없음, 시안 반복값 */
+  --radius-12: 0.75rem; /* 12px */
+  --radius-16: 1rem; /* 16px */
+
+  /* 간격: Figma 변수 없음, 시안 반복값 */
+  --spacing-2: 0.125rem; /* 2px */
+  --spacing-4: 0.25rem; /* 4px */
+  --spacing-5: 0.3125rem; /* 5px */
+  --spacing-6: 0.375rem; /* 6px */
+  --spacing-8: 0.5rem; /* 8px */
+  --spacing-10: 0.625rem; /* 10px */
+  --spacing-16: 1rem; /* 16px */
+  --spacing-32: 2rem; /* 32px */
+
+  /* 그림자: Figma 스타일 없음, 시안 반복값 */
+  --shadow-blur-4: 0 0 0.25rem rgb(0 0 0 / 0.6); /* X 0, Y 0, Blur 4px, Spread 0, #000000 60% */
+  --shadow-blur-8: 0 0 0.5rem rgb(0 0 0 / 0.1); /* X 0, Y 0, Blur 8px, Spread 0, #000000 10% */
+  --shadow-inner-16: inset 0 0.125rem 1.01875rem rgb(0 0 0 / 0.15); /* 메인 검색 영역 안쪽 그림자 */
+  --shadow-menu-card: 0 0.25rem 0.55625rem rgb(0 0 0 / 0.25), 0.25rem 0.25rem 0.625rem rgb(0 0 0 / 0.15); /* 메인 메뉴 카드 */
+
+  --color-press-caption: rgb(0 0 0 / 0.8); /* 보도자료 제목 배경: 검정 80% */
+
+  --shadow-banner: 0 0.625rem 0.925rem rgb(0 0 0 / 0.15), 0.5625rem 0.25rem 0.73125rem rgb(0 0 0 / 0.15); /* 데스크탑 메인 배너 */
+  --shadow-life-cycle: 0 0.6875rem 0.8625rem rgb(0 0 0 / 0.15), 0.5rem 0.25rem 0.83125rem rgb(0 0 0 / 0.15); /* 생애주기 카드 */
+  --shadow-sidebar: 0 0.375rem 0.83125rem rgb(0 0 0 / 0.15), 0.75rem 0.25rem 2.81875rem rgb(0 0 0 / 0.15); /* 사이드바 */
+
+  /* 그라디언트: 메인 화면 시안 값 */
+  --gradient-header: linear-gradient(180deg, #ffffff 0%, #f3fafb 100%);
+  --gradient-mayor-card: linear-gradient(135deg, #ffffff 0%, #d7e9f9 100%);
+  --gradient-greeting: linear-gradient(90deg, #2d7ac6 0%, #2f5d8b 62%, #163b60 100%);
+  --gradient-mayor-button: linear-gradient(90deg, #0b2951 0%, #2d7ac6 100%);
+}
+
+/* TEXT 컬렉션의 DESKTOP 모드 */
+@media (min-width: 1280px) {
+  :root {
+    --text-size-body-des: var(--text-premitives-textsize-18);
+    --text-size-body-title: var(--text-premitives-textsize-20);
+    --text-size-label-label: var(--text-premitives-textsize-17);
+    --text-size-maincard-des: var(--text-premitives-textsize-40);
+    --text-size-maincard-title: var(--text-premitives-textsize-60);
+    --text-size-card-title: var(--text-premitives-textsize-32);
+    --text-size-card-des: var(--text-premitives-textsize-24);
+  }
+}

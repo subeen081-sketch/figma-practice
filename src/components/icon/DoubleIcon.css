@@ -1,0 +1,17 @@
+/* Figma 「더블아이콘」(355:3767). 값은 모두 tokens.css 변수를 사용합니다. */
+.double-icon {
+  width: calc(var(--spacing-16) + var(--spacing-8));
+  height: calc(var(--spacing-16) + var(--spacing-8));
+}
+
+@media (min-width: 1280px) {
+  .double-icon {
+    width: var(--spacing-32);
+    height: var(--spacing-32);
+  }
+}
+
+.double-icon {
+  outline: 1px solid var(--color-text-black);
+  outline-offset: -1px;
+}

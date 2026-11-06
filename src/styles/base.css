@@ -1,0 +1,53 @@
+/* 기본 스타일. 색상과 폰트는 tokens.css 변수만 사용합니다. */
+body {
+  font-family: var(--text-style-body-des-font-family);
+  font-size: var(--text-size-body-des);
+  font-weight: var(--text-style-body-des-font-weight);
+  line-height: var(--text-style-body-des-line-height);
+  letter-spacing: var(--text-style-body-des-letter-spacing);
+  color: var(--lib-color-text-primary);
+  background-color: var(--color-text-white);
+}
+
+h1 {
+  font-family: var(--text-style-maincard-tit-font-family);
+  font-size: var(--text-size-maincard-title);
+  font-weight: var(--text-style-maincard-tit-font-weight);
+  line-height: var(--text-style-maincard-tit-line-height);
+  letter-spacing: var(--text-style-maincard-tit-letter-spacing);
+}
+
+h2 {
+  font-family: var(--text-style-card-tit-desktop-font-family);
+  font-size: var(--text-size-card-title);
+  font-weight: var(--text-style-card-tit-desktop-font-weight);
+  line-height: var(--text-style-card-tit-desktop-line-height);
+  letter-spacing: var(--text-style-card-tit-desktop-letter-spacing);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--text-style-body-tit-font-family);
+  font-size: var(--text-size-body-title);
+  font-weight: var(--text-style-body-tit-font-weight);
+  line-height: var(--text-style-body-tit-line-height);
+  letter-spacing: var(--text-style-body-tit-letter-spacing);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 시안의 데스크탑 큰 제목은 SemiBold입니다. */
+@media (min-width: 1280px) {
+  h1 {
+    font-weight: var(--text-style-maincard-tit-desk-font-weight);
+  }
+}

@@ -1,0 +1,41 @@
+/* Figma 「메인메뉴버튼/모바일」(397:4528). 값은 모두 tokens.css 변수를 사용합니다. */
+.main-menu-button {
+  display: flex;
+}
+
+.main-menu-button__tab {
+  width: calc(var(--spacing-32) * 3 + var(--spacing-16) + var(--spacing-8));
+  min-height: calc(var(--spacing-32) + var(--spacing-16));
+  padding: 0;
+  border: 0;
+  background-color: var(--lib-color-head-box);
+  clip-path: polygon(16% 0, 100% 0, 84% 100%, 0 100%);
+  font-family: var(--lib-text-style-card-title-font-family);
+  font-size: var(--lib-text-style-card-title-font-size);
+  font-weight: var(--lib-text-style-card-title-font-weight);
+  line-height: var(--lib-text-style-card-title-line-height);
+  letter-spacing: var(--lib-text-style-card-title-letter-spacing);
+  color: var(--lib-color-text-card);
+  cursor: pointer;
+}
+
+.main-menu-button__tab:first-child {
+  background-color: var(--lib-color-primary-1);
+  clip-path: polygon(0 0, 100% 0, 84% 100%, 0 100%);
+}
+
+.main-menu-button__tab + .main-menu-button__tab {
+  margin-left: calc(var(--spacing-16) * -1 - var(--spacing-2) - 1px);
+}
+
+/* 데스크탑: 317px × 62px, 글자 Noto Bold 20 */
+.main-menu-button--desktop .main-menu-button__tab {
+  width: calc(var(--spacing-32) * 5 + var(--spacing-10));
+  min-height: calc(var(--spacing-32) * 2 + -2px);
+  font-size: var(--lib-text-style-poster-dec-font-size);
+  font-weight: var(--lib-text-textweight-700);
+}
+
+.main-menu-button--desktop .main-menu-button__tab + .main-menu-button__tab {
+  margin-left: calc(var(--spacing-16) * -1 - var(--spacing-8) - 1px);
+}

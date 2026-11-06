@@ -1,0 +1,25 @@
+/* Figma 「다음아이콘」(273:2384). 값은 모두 tokens.css 변수를 사용합니다. */
+.next-icon {
+  width: calc(var(--spacing-16) + var(--spacing-8));
+  height: calc(var(--spacing-16) + var(--spacing-8));
+}
+
+@media (min-width: 1280px) {
+  .next-icon {
+    width: var(--spacing-32);
+    height: var(--spacing-32);
+  }
+}
+
+.next-icon--circle {
+  width: var(--spacing-32);
+  height: var(--spacing-32);
+  border-radius: var(--radius-16);
+  background-color: var(--color-text-white);
+  box-shadow: var(--shadow-blur-8);
+}
+
+.next-icon--box {
+  outline: 1px solid var(--color-text-black);
+  outline-offset: -1px;
+}

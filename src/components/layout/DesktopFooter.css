@@ -1,0 +1,133 @@
+/* Figma 「푸터」(데스크탑), 「푸터메뉴목록」(397:6706). 값은 모두 tokens.css 변수를 사용합니다. */
+.desktop-footer {
+  width: 100%;
+}
+
+.desktop-footer__banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--spacing-32) * 2 + var(--spacing-16) + var(--spacing-8));
+  padding: calc(var(--spacing-16) + var(--spacing-2) + 1px) 0;
+  border-top: 1px solid var(--lib-color-boder-boder);
+  border-bottom: 1px solid var(--lib-color-boder-boder);
+}
+
+.desktop-footer__controls {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--spacing-32);
+}
+
+.desktop-footer__banner-list {
+  display: flex;
+  gap: calc(var(--spacing-32) + var(--spacing-16) + 1px);
+  width: calc(var(--spacing-32) * 24 + var(--spacing-10) + var(--spacing-4));
+  overflow: hidden;
+  font-family: var(--lib-text-style-card-title-font-family);
+  font-size: var(--lib-text-style-card-title-font-size);
+  font-weight: var(--lib-text-style-card-title-font-weight);
+  line-height: var(--lib-text-style-card-title-line-height);
+  letter-spacing: var(--lib-text-style-card-title-letter-spacing);
+  color: var(--color-text-black);
+  white-space: nowrap;
+}
+
+.desktop-footer__menus {
+  display: flex;
+  justify-content: center;
+  gap: calc(var(--spacing-32) + var(--spacing-10));
+  background-color: var(--lib-color-footer-footer);
+}
+
+.desktop-footer__menus .footer-menu-item {
+  width: calc(var(--spacing-32) * 5 + var(--spacing-4));
+  padding: 0 0 0 calc(var(--spacing-16) + var(--spacing-4));
+  border-right: 1px solid var(--lib-color-boder-boder);
+}
+
+.desktop-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--spacing-32) * 3 + var(--spacing-16) + var(--spacing-5));
+  min-height: calc(var(--spacing-32) * 5 + var(--spacing-10) + var(--spacing-2) + 1px);
+}
+
+.desktop-footer__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  width: calc(var(--spacing-32) * 21 + var(--spacing-4) + var(--spacing-2));
+  font-family: var(--lib-text-style-head-menu2-font-family);
+  font-size: var(--lib-text-style-head-menu2-font-size);
+  font-weight: var(--lib-text-style-head-menu2-font-weight);
+  line-height: var(--lib-text-style-head-menu2-line-height);
+  letter-spacing: var(--lib-text-style-head-menu2-letter-spacing);
+  color: var(--lib-color-text-primary);
+}
+
+.desktop-footer__links {
+  display: flex;
+}
+
+.desktop-footer__links .head-menu-item {
+  min-height: calc(var(--spacing-32) + var(--spacing-8));
+  padding: 0 calc(var(--spacing-10) + var(--spacing-5));
+  border-right: 1px solid var(--lib-color-boder-boder);
+  color: var(--lib-color-text-primary);
+}
+
+.desktop-footer__links .head-menu-item:first-child {
+  padding-left: 0;
+}
+
+.desktop-footer__links .head-menu-item--active {
+  color: var(--lib-premitives-blue-800);
+}
+
+.desktop-footer__contacts {
+  display: flex;
+  gap: calc(var(--spacing-32) + -1px);
+  white-space: nowrap;
+}
+
+.desktop-footer__contacts b {
+  font-weight: var(--lib-text-style-card-menu-font-weight);
+}
+
+.desktop-footer__accent {
+  color: var(--lib-premitives-blue-800);
+}
+
+.desktop-footer__copyright {
+  font-family: var(--lib-text-style-label-font-family);
+  font-size: var(--lib-text-style-label-font-size);
+  font-weight: var(--lib-text-style-label-font-weight);
+  line-height: var(--lib-text-style-label-line-height);
+  letter-spacing: var(--lib-text-style-label-letter-spacing);
+  color: var(--lib-color-boder-boder);
+}
+
+.desktop-footer__mark {
+  flex-shrink: 0;
+  width: calc(var(--spacing-32) * 2 + var(--spacing-16) + var(--spacing-10) + var(--spacing-5) + var(--spacing-2));
+}
+
+/* 시안의 세로 위치: 로고 27px, 글 25px, 마크 83px */
+.desktop-footer__bottom {
+  align-items: flex-start;
+}
+
+.desktop-footer__bottom .city-logo {
+  margin: calc(var(--spacing-16) + var(--spacing-10) + 1px) var(--spacing-8) 0;
+}
+
+.desktop-footer__text {
+  margin-top: calc(var(--spacing-16) + var(--spacing-5) + var(--spacing-4));
+}
+
+.desktop-footer__mark {
+  margin: calc(var(--spacing-32) * 2 + var(--spacing-16) + var(--spacing-2) + 1px) var(--spacing-8) 0;
+}

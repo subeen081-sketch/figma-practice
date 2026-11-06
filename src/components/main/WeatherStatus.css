@@ -1,0 +1,20 @@
+/* Figma 「날씨상태」(397:4144). 값은 모두 tokens.css 변수를 사용합니다. */
+.weather-status {
+  font-family: var(--lib-text-style-card-menu-font-family);
+  font-size: var(--lib-text-style-card-menu-font-size);
+  font-weight: var(--lib-text-style-card-menu-font-weight);
+  line-height: var(--lib-text-style-card-menu-line-height);
+  letter-spacing: var(--lib-text-style-card-menu-letter-spacing);
+}
+
+.weather-status--good {
+  color: var(--lib-color-text-point-4);
+}
+
+.weather-status--normal {
+  color: var(--lib-color-text-primary);
+}
+
+.weather-status--bad {
+  color: var(--lib-color-text-point-2);
+}

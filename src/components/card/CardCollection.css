@@ -1,0 +1,44 @@
+/* Figma 「카드모음」(333:2894). 값은 모두 tokens.css 변수를 사용합니다. 카드 폭은 부모가 정합니다. */
+.card-collection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  width: 100%;
+}
+
+/* 150px × 160px, 라벨 위치 5px */
+.card-collection--grid .card-collection__image {
+  padding: var(--spacing-5);
+  aspect-ratio: 150 / 160;
+}
+
+/* 250px × 250px */
+.card-collection--calendar .card-collection__image {
+  aspect-ratio: 1 / 1;
+}
+
+/* 완성화면 기준: 제목과 날짜 사이 간격 없음 */
+.card-collection--calendar .card-collection__description {
+  gap: 0;
+}
+
+/* 155px × 245px */
+.card-collection--main .card-collection__image {
+  aspect-ratio: 155 / 245;
+}
+
+/* 시안의 말줄임: 그리드는 제목과 장소 한 줄, 메인은 제목 두 줄과 장소 한 줄 */
+.card-collection--grid .card-description__title,
+.card-collection--grid .card-description__text,
+.card-collection--main .card-description__text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-collection--main .card-description__title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

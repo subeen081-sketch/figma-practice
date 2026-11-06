@@ -1,0 +1,68 @@
+/* Figma 「캘린더」 영역. 값은 모두 tokens.css 변수를 사용합니다. */
+.calendar-month {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-10);
+  width: calc(var(--spacing-32) * 10 + var(--spacing-10) + var(--spacing-2));
+  max-width: 100%;
+  padding: calc(var(--spacing-8) + var(--spacing-4)) calc(var(--spacing-5) + var(--spacing-4));
+  border: 1px solid var(--color-label);
+  background-color: var(--color-text-white);
+}
+
+.calendar-month__head {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.calendar-month__header {
+  gap: var(--spacing-2);
+  padding: 0 var(--spacing-10);
+}
+
+.calendar-month__header .calendar-header__title {
+  gap: var(--spacing-16);
+  min-height: calc(var(--spacing-32) + var(--spacing-16) + var(--spacing-2));
+}
+
+.calendar-month__types {
+  display: flex;
+  align-items: center;
+  gap: min(calc(var(--spacing-32) + 3px), calc((100% - calc(var(--spacing-32) * 5 + var(--spacing-16) + var(--spacing-8) + 1px)) / 3));
+  width: 100%;
+  min-height: calc(var(--spacing-32) + var(--spacing-10) + 1px);
+  padding: 0 calc(var(--spacing-5) + var(--spacing-4));
+}
+
+.calendar-month__dates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-10);
+  width: 100%;
+  padding: calc(var(--spacing-8) + var(--spacing-5)) 0;
+}
+
+.calendar-month__weekdays {
+  display: flex;
+  max-width: 100%;
+  gap: var(--spacing-4);
+}
+
+.calendar-month__week {
+  display: flex;
+  max-width: 100%;
+  gap: 3px;
+}
+
+.calendar-month__week .calendar-date-cell {
+  position: relative;
+}
+
+.calendar-month__marker {
+  position: absolute;
+  top: calc(var(--spacing-16) + var(--spacing-10));
+  left: var(--spacing-5);
+}

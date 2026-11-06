@@ -1,0 +1,36 @@
+/* Figma 「뷰영역/데스크탑」 4종. 값은 모두 tokens.css 변수를 사용합니다. 폭은 부모가 정합니다. */
+.view-area-desktop {
+  width: 100%;
+}
+
+/* 297:1446 메인 카드: 280px × 425px, 최소 폭 250px, 라벨 위치 10px */
+.view-area-desktop--main {
+  min-width: calc(var(--spacing-32) * 7 + var(--spacing-16) + var(--spacing-10));
+}
+
+.view-area-desktop--main .view-area-desktop__image {
+  gap: var(--spacing-8);
+  padding: var(--spacing-10);
+  aspect-ratio: 280 / 425;
+}
+
+/* 297:1451 가로형 카드: 300px × 184px */
+.view-area-desktop--wide .view-area-desktop__image {
+  gap: calc(var(--spacing-8) + var(--spacing-4));
+  aspect-ratio: 300 / 184;
+}
+
+/* 297:1456 그리드 카드: 전체 200px × 295px, 이미지 200px × 285px */
+.view-area-desktop--grid {
+  padding: var(--spacing-5) 0;
+}
+
+.view-area-desktop--grid .view-area-desktop__image {
+  gap: var(--spacing-8);
+  aspect-ratio: 200 / 285;
+}
+
+/* 297:1461 상세 포스터: 410px × 604px */
+.view-area-desktop--detail .view-area-desktop__image {
+  aspect-ratio: 410 / 604;
+}

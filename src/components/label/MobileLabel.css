@@ -1,0 +1,45 @@
+/* Figma 「모바일라벨」(333:2811). 값은 모두 tokens.css 변수를 사용합니다. */
+.mobile-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--spacing-2);
+  border-radius: var(--radius-s);
+  font-family: var(--text-style-label-mo-font-family);
+  font-size: var(--text-style-label-mo-font-size);
+  font-weight: var(--text-style-label-mo-font-weight);
+  line-height: var(--text-style-label-mo-line-height);
+  letter-spacing: var(--text-style-label-mo-letter-spacing);
+  color: var(--color-text-white);
+  white-space: nowrap;
+}
+
+.mobile-label--ongoing {
+  background-color: var(--color-primary-1);
+}
+
+.mobile-label--upcoming {
+  background-color: var(--color-label);
+}
+
+.mobile-label--ended {
+  background-color: var(--color-calender-border2);
+}
+
+/* 55px × 25px, 그림자 있음 */
+.mobile-label--small {
+  min-width: calc(var(--spacing-32) + var(--spacing-16) + var(--spacing-5) + var(--spacing-2));
+  min-height: calc(var(--spacing-16) + var(--spacing-5) + var(--spacing-4));
+  box-shadow: var(--shadow-blur-4);
+}
+
+/* 진행종료는 글자가 길어 65px */
+.mobile-label--small.mobile-label--ended {
+  min-width: calc(var(--spacing-32) + var(--spacing-16) + var(--spacing-10) + var(--spacing-5) + var(--spacing-2));
+}
+
+/* 메인카드용 100px × 35px, 그림자 없음 */
+.mobile-label--large {
+  min-width: calc(var(--spacing-32) + var(--spacing-32) + var(--spacing-32) + var(--spacing-4));
+  min-height: calc(var(--spacing-16) + var(--spacing-10) + var(--spacing-5) + var(--spacing-4));
+}

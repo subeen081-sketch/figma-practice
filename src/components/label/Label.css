@@ -1,0 +1,40 @@
+/* Figma 「모바일라벨2」(333:2842). 값은 모두 tokens.css 변수를 사용합니다. */
+.label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--spacing-2);
+  border-radius: var(--radius-s);
+  font-family: var(--text-style-label-mo-font-family);
+  font-size: var(--text-style-label-mo-font-size);
+  font-weight: var(--text-style-label-mo-font-weight);
+  line-height: var(--text-style-label-mo-line-height);
+  letter-spacing: var(--text-style-label-mo-letter-spacing);
+  color: var(--color-text-white);
+  white-space: nowrap;
+}
+
+.label--event {
+  background-color: var(--color-calender-point1);
+}
+
+.label--festival {
+  background-color: var(--color-calender-point3);
+}
+
+.label--performance {
+  background-color: var(--color-calender-point2);
+}
+
+/* 38px × 25px, 그림자 있음 */
+.label--small {
+  min-width: calc(var(--spacing-32) + var(--spacing-6));
+  min-height: calc(var(--spacing-16) + var(--spacing-5) + var(--spacing-4));
+  box-shadow: var(--shadow-blur-4);
+}
+
+/* 메인카드용 60px × 35px, 그림자 없음 */
+.label--large {
+  min-width: calc(var(--spacing-32) + var(--spacing-16) + var(--spacing-8) + var(--spacing-4));
+  min-height: calc(var(--spacing-16) + var(--spacing-10) + var(--spacing-5) + var(--spacing-4));
+}

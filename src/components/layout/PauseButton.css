@@ -1,0 +1,36 @@
+/* Figma 「정지아이콘」(397:4545). 값은 모두 tokens.css 변수를 사용합니다. */
+.pause-button {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-6);
+  width: calc(var(--spacing-16) + var(--spacing-8));
+  height: calc(var(--spacing-16) + var(--spacing-8));
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.pause-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100%, calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4)));
+  height: max(100%, calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4)));
+  transform: translate(-50%, -50%);
+}
+
+.pause-button--circle {
+  border: 1px solid var(--lib-color-head-box);
+  border-radius: var(--radius-12);
+}
+
+.pause-button__bar {
+  width: var(--spacing-4);
+  height: calc(var(--spacing-10) + var(--spacing-4));
+  background-color: var(--lib-color-text-primary);
+}

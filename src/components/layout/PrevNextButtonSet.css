@@ -1,0 +1,13 @@
+/* Figma 「이전다음버튼세트」(397:4539). 값은 모두 tokens.css 변수를 사용합니다. */
+.prev-next-button-set {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-10);
+}
+
+.prev-next-button-set__line {
+  width: calc(var(--spacing-10) + var(--spacing-4));
+  height: 1px;
+  background-color: var(--lib-color-boder-boder);
+  transform: rotate(90deg);
+}

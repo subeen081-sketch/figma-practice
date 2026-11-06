@@ -1,0 +1,66 @@
+/* Figma 「버튼」(294:1251). 값은 모두 tokens.css 변수를 사용합니다. */
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(var(--spacing-32) + var(--spacing-2));
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-s);
+  background-color: var(--color-label);
+  font-family: var(--text-style-label-2-mo-font-family);
+  font-size: var(--text-style-label-2-mo-font-size);
+  font-weight: var(--text-style-label-2-mo-font-weight);
+  line-height: var(--text-style-label-2-mo-line-height);
+  letter-spacing: var(--text-style-label-2-mo-letter-spacing);
+  color: var(--color-text-white);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* 눈에 보이는 크기는 시안을 따르고, 누르는 영역만 최소 44px로 넓힙니다. */
+.button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100%, calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4)));
+  height: max(100%, calc(var(--spacing-32) + var(--spacing-8) + var(--spacing-4)));
+  transform: translate(-50%, -50%);
+}
+
+/* 70px × 34px */
+.button--prev {
+  min-width: calc(var(--spacing-32) + var(--spacing-32) + var(--spacing-6));
+}
+
+/* 49px × 34px */
+.button--list {
+  min-width: calc(var(--spacing-32) + var(--spacing-10) + var(--spacing-5) + var(--spacing-2));
+}
+
+.button__text-desktop {
+  display: none;
+}
+
+/* 데스크탑은 120px × 60px */
+@media (min-width: 1280px) {
+  .button {
+    min-width: calc(var(--spacing-32) + var(--spacing-32) + var(--spacing-32) + var(--spacing-16) + var(--spacing-8));
+    min-height: calc(var(--spacing-32) + var(--spacing-16) + var(--spacing-8) + var(--spacing-4));
+    font-family: var(--text-style-label-2-desk-font-family);
+    font-size: var(--text-style-label-2-desk-font-size);
+    font-weight: var(--text-style-label-2-desk-font-weight);
+    line-height: var(--text-style-label-2-desk-line-height);
+    letter-spacing: var(--text-style-label-2-desk-letter-spacing);
+  }
+
+  .button__text-mobile {
+    display: none;
+  }
+
+  .button__text-desktop {
+    display: inline;
+  }
+}

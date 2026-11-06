@@ -1,0 +1,33 @@
+/* Figma 「메인목록모바일」(397:5071). 값은 모두 tokens.css 변수를 사용합니다. */
+.main-service-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-32);
+}
+
+.main-service-list__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: calc(var(--spacing-32) + var(--spacing-8));
+}
+
+.main-service-list__title {
+  font-family: var(--lib-text-style-bold-font-family);
+  font-size: var(--lib-text-style-bold-font-size);
+  font-weight: var(--lib-text-style-bold-font-weight);
+  line-height: var(--lib-text-style-bold-line-height);
+  letter-spacing: var(--lib-text-style-bold-letter-spacing);
+  color: var(--lib-color-text-primary);
+}
+
+.main-service-list__title span {
+  color: var(--lib-color-text-point-1);
+}
+
+.main-service-list__items {
+  display: flex;
+  gap: var(--spacing-2);
+  height: calc(var(--spacing-32) * 5 + var(--spacing-10));
+  overflow: hidden;
+}

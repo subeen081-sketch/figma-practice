@@ -1,0 +1,13 @@
+/* Figma 「TITLE」(373:3903). 값은 모두 tokens.css 변수를 사용합니다. */
+.detail-title {
+  width: 100%;
+  padding: var(--spacing-16) 0;
+  border-bottom: 1px solid var(--lib-color-boder-boder);
+  background-color: var(--color-text-white);
+  font-family: var(--text-style-card-title-font-family);
+  font-size: var(--text-style-card-title-font-size);
+  font-weight: var(--text-style-card-title-font-weight);
+  line-height: var(--text-style-card-title-line-height);
+  letter-spacing: var(--text-style-card-title-letter-spacing);
+  color: var(--lib-color-text-primary);
+}

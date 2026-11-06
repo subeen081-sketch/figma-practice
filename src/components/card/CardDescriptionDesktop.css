@@ -1,0 +1,25 @@
+/* Figma 「카드설명/데스크탑」(422:4513). 값은 모두 tokens.css 변수를 사용합니다. */
+.card-description-desktop {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-32);
+  padding: 0 var(--spacing-8);
+  color: var(--lib-color-text-primary);
+  overflow-wrap: break-word;
+}
+
+.card-description-desktop__title {
+  font-family: var(--text-style-card-tit-desktop-font-family);
+  font-size: var(--text-style-card-tit-desktop-font-size);
+  font-weight: var(--text-style-card-tit-desktop-font-weight);
+  line-height: var(--text-style-card-tit-desktop-line-height);
+  letter-spacing: var(--text-style-card-tit-desktop-letter-spacing);
+}
+
+.card-description-desktop__text {
+  font-family: var(--text-style-card-des-desk-font-family);
+  font-size: var(--text-style-card-des-desk-font-size);
+  font-weight: var(--text-style-card-des-desk-font-weight);
+  line-height: var(--text-style-card-des-desk-line-height);
+  letter-spacing: var(--text-style-card-des-desk-letter-spacing);
+}

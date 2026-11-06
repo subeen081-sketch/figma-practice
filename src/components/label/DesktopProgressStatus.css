@@ -1,0 +1,44 @@
+/* Figma 「데스크탑/진행상태」(422:4707). 값은 모두 tokens.css 변수를 사용합니다. */
+.desktop-progress-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--spacing-2);
+  border-radius: var(--radius-s);
+  font-weight: var(--lib-text-textweight-700);
+  color: var(--color-text-white);
+  white-space: nowrap;
+}
+
+.desktop-progress-status--ongoing {
+  background-color: var(--color-primary-1);
+}
+
+.desktop-progress-status--upcoming {
+  background-color: var(--color-label);
+}
+
+.desktop-progress-status--ended {
+  background-color: var(--color-calender-border2);
+}
+
+/* 80px × 40px, 그림자 있음 */
+.desktop-progress-status--small {
+  min-width: calc(var(--spacing-32) + var(--spacing-32) + var(--spacing-16));
+  min-height: calc(var(--spacing-32) + var(--spacing-8));
+  font-family: var(--text-style-label-desk-font-family);
+  font-size: var(--text-style-label-desk-font-size);
+  line-height: var(--text-style-label-desk-line-height);
+  letter-spacing: var(--text-style-label-desk-letter-spacing);
+  box-shadow: var(--shadow-blur-4);
+}
+
+/* 메인카드용 125px × 60px, 그림자 없음 */
+.desktop-progress-status--large {
+  min-width: calc(var(--spacing-32) * 3 + var(--spacing-16) + var(--spacing-8) + var(--spacing-5));
+  min-height: calc(var(--spacing-32) + var(--spacing-16) + var(--spacing-8) + var(--spacing-4));
+  font-family: var(--text-style-label-2-desk-font-family);
+  font-size: var(--text-style-label-2-desk-font-size);
+  line-height: var(--text-style-label-2-desk-line-height);
+  letter-spacing: var(--text-style-label-2-desk-letter-spacing);
+}
