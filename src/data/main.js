@@ -127,9 +127,11 @@ export const GUIDE_HOVER_ICONS = {
   청사안내: { src: guideHoverBuilding, width: 55, height: 55, top: 2, crop: [143.34, 141.75, -23.49, -26.33] },
   // 조직도 호버 그림은 칸(56px)보다 길어 아래가 잘리므로 10px 올려 끝까지 보이게 합니다.
   조직도: { src: guideHoverOrganization, width: 68, height: 69, top: -10 },
-  업무안내: { src: guideHoverWork, width: 50, height: 57, crop: [162.47, 137.5, -33.62, -18.75] },
-  '오시는 길': { src: guideHoverLocation, width: 47, height: 63, crop: [161.9, 117.31, -33.33, -8.65] },
-  민원대기실: { src: guideHoverComplaint, width: 69, height: 66, crop: [123.37, 114.67, -13.23, -7.14] },
+  // 업무안내·오시는 길·민원대기실도 그림 아래가 칸(56px) 밖으로 나가서 위로 올려 끝까지 보이게 합니다.
+  // 업무안내는 호버 그림이 기본 아이콘보다 커서 칸 바닥에 붙으므로 92%(46×52.44)로 줄여 위아래 여유를 둡니다.
+  업무안내: { src: guideHoverWork, width: 46, height: 52.44, top: 1, crop: [162.47, 137.5, -33.62, -18.75] },
+  '오시는 길': { src: guideHoverLocation, width: 47, height: 63, top: -5, crop: [161.9, 117.31, -33.33, -8.65] },
+  민원대기실: { src: guideHoverComplaint, width: 69, height: 66, top: -7, crop: [123.37, 114.67, -13.23, -7.14] },
 }
 
 // 바로가기 항목: 데스크탑 사이드바와 모바일 하단 고정 바가 함께 씁니다.
