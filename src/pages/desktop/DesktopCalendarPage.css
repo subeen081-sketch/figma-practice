@@ -25,17 +25,28 @@
   display: flex;
   flex-direction: column;
   gap: calc(var(--spacing-32) * 2 + var(--spacing-8));
+  /* 스크롤을 따라오는 달력이 긴 제목을 덮지 않도록 달력 폭(322px) + 24px을 비워 둡니다. */
+  padding-right: calc(var(--spacing-32) * 10 + var(--spacing-2) + var(--spacing-16) + var(--spacing-8));
 }
 
 .desktop-calendar-page__cards .card--calendar {
   flex-wrap: nowrap;
 }
 
-.desktop-calendar-page__month {
+/* 행사 목록 오른쪽 세로 레일: 시안의 달력 위치(위 24px, 오른쪽 6px)에서 목록 끝까지 이어집니다. */
+.desktop-calendar-page__month-rail {
   position: absolute;
   top: calc(var(--spacing-16) + var(--spacing-8));
   right: var(--spacing-6);
+  bottom: calc(var(--spacing-32) * 2 + var(--spacing-8));
   width: calc(var(--spacing-32) * 10 + var(--spacing-2));
+}
+
+/* 달력은 레일 안에서 화면 위 24px에 붙어 스크롤을 따라 내려오고, 레일 끝에서 멈춥니다. */
+.desktop-calendar-page__month {
+  position: sticky;
+  top: calc(var(--spacing-16) + var(--spacing-8));
+  width: 100%;
   padding-right: 0;
   padding-left: 0;
 }

@@ -31,7 +31,10 @@ function DesktopCalendarPage() {
             </li>
           ))}
         </ul>
-        <CalendarMonth className="desktop-calendar-page__month" />
+        {/* 달력은 오른쪽 레일 안에서 스크롤을 따라 내려오고 올라갑니다. */}
+        <div className="desktop-calendar-page__month-rail">
+          <CalendarMonth className="desktop-calendar-page__month" />
+        </div>
       </div>
       <DesktopPageMoveButton aria-current="page">1</DesktopPageMoveButton>
       <Button variant="prev" onClick={() => navigate('/')} />
