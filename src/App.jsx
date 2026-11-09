@@ -24,7 +24,7 @@ function App() {
   const isDesktop = useIsDesktop()
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <main>
         <Routes>
