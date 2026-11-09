@@ -33,6 +33,15 @@
   flex-wrap: nowrap;
 }
 
+/* 이미지는 300px 그대로 두고, 공간이 부족하면 설명 글자가 줄바꿈됩니다. */
+.desktop-calendar-page__cards .card--calendar .card__view {
+  flex-shrink: 0;
+}
+
+.desktop-calendar-page__cards .card--calendar > :not(.card__view) {
+  min-width: 0;
+}
+
 /* 행사 목록 오른쪽 세로 레일: 시안의 달력 위치(위 24px, 오른쪽 6px)에서 목록 끝까지 이어집니다. */
 .desktop-calendar-page__month-rail {
   position: absolute;
