@@ -1,4 +1,5 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
+import useAutoPlay from '../../hooks/useAutoPlay'
 import markWa from '../../assets/images/mark-wa.png'
 import CityLogo from './CityLogo'
 import FooterMenuItem from './FooterMenuItem'
@@ -14,14 +15,25 @@ const LINKS = ['개인정보처리방침', '이메일무단수집거부', '전�
 
 function DesktopFooter() {
   const listRef = useRef(null)
+  const [paused, setPaused] = useState(false)
   const move = (direction) => listRef.current?.scrollBy({ left: direction * listRef.current.clientWidth, behavior: 'smooth' })
+
+  // 시안 프로토타입: 배너 목록이 2초마다 한 칸씩 넘어가고, 끝에 닿으면 처음으로 돌아갑니다.
+  const step = () => {
+    const list = listRef.current
+    if (!list) return
+    const next = [...list.children].find((item) => item.offsetLeft - list.offsetLeft > list.scrollLeft + 1)
+    const atEnd = list.scrollLeft + list.clientWidth >= list.scrollWidth - 1
+    list.scrollTo({ left: atEnd || !next ? 0 : next.offsetLeft - list.offsetLeft, behavior: 'smooth' })
+  }
+  useAutoPlay(step, 2000, paused)
 
   return (
     <footer className="desktop-footer">
       <div className="desktop-footer__banner">
         <div className="desktop-footer__controls">
           <LineArrowButton variant="prev" circle onClick={() => move(-1)} />
-          <PauseButton circle />
+          <PauseButton circle aria-label={paused ? '배너 목록 자동 넘김 다시 시작' : '배너 목록 자동 넘김 일시정지'} aria-pressed={paused} onClick={() => setPaused(!paused)} />
           <LineArrowButton variant="next" circle onClick={() => move(1)} />
           <TopBottomButton variant="banner" />
         </div>

@@ -46,7 +46,7 @@ a:hover {
 }
 
 /* 시안의 데스크탑 큰 제목은 SemiBold입니다. */
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
   h1 {
     font-weight: var(--text-style-maincard-tit-desk-font-weight);
   }

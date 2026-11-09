@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 
-const QUERY = '(min-width: 1280px)'
+const QUERY = '(min-width: 1440px)'
 
-// 화면 폭이 데스크탑 구간(1280px 이상)인지 알려 줍니다.
+// 화면 폭이 데스크탑 구간(1440px 이상)인지 알려 줍니다.
 function useIsDesktop() {
   const [isDesktop, setIsDesktop] = useState(() => window.matchMedia(QUERY).matches)
 

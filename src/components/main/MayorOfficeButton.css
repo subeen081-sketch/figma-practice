@@ -21,3 +21,9 @@
   height: var(--spacing-8);
   background-color: var(--lib-color-text-card);
 }
+
+/* Figma 「시장실바로가기버튼」 기본 → 호버(397:4560): 글자에 밑줄이 생깁니다. */
+.mayor-office-button:hover,
+.mayor-office-button:focus-visible {
+  text-decoration: underline;
+}

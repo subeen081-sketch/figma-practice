@@ -382,7 +382,7 @@
 }
 
 /* TEXT 컬렉션의 DESKTOP 모드 */
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
   :root {
     --text-size-body-des: var(--text-premitives-textsize-18);
     --text-size-body-title: var(--text-premitives-textsize-20);

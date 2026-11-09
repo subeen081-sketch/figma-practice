@@ -67,3 +67,14 @@
 .detail-page--open .detail-info__content {
   min-height: calc(var(--spacing-32) * 10 + var(--spacing-10));
 }
+
+/* 768~1439px: 화면 폭에 맞게 넓힙니다. */
+@media (min-width: 768px) {
+  .detail-page {
+    padding: 0 var(--spacing-16) var(--spacing-10);
+  }
+
+  .detail-page__main {
+    width: 100%;
+  }
+}

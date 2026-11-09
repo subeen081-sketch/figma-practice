@@ -10,6 +10,13 @@
   overflow: hidden;
 }
 
+/* 768~1439px: 360px로 가운데 두지 않고 화면 폭에 맞게 넓힙니다. */
+@media (min-width: 768px) {
+  .page {
+    max-width: none;
+  }
+}
+
 .page__logo-row {
   display: flex;
   width: 100%;

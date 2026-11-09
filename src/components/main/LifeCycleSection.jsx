@@ -17,11 +17,12 @@ const PEOPLE = [
 ]
 const TABS = ['생애주기별서비스', '참여공간']
 
-function LifeCycleSection() {
+// hoverMotion이 있으면 인물에 마우스를 올렸을 때 그림이 위로 올라갑니다(데스크탑 시안).
+function LifeCycleSection({ hoverMotion = false }) {
   const [tab, setTab] = useState(0)
 
   return (
-    <section className="life-cycle-section">
+    <section className={`life-cycle-section ${hoverMotion ? 'life-cycle-section--hover' : ''}`.trim()}>
       <div className="life-cycle-section__intro">
         <span className="life-cycle-section__icon">
           <img src={magnifier} alt="" style={cropBox(140, 97, 0, 0, 0.653, 0.66, 0.164, 0.22)} />

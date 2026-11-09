@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import useAutoPlay from '../../hooks/useAutoPlay'
 import { Link } from 'react-router'
 import ScheduleRelatedButton from '../../components/button/ScheduleRelatedButton'
 import Card from '../../components/card/Card'
@@ -53,7 +54,12 @@ function DesktopMainPage() {
   const [tab, setTab] = useState('news')
   const [newsTab, setNewsTab] = useState(0)
   const [sns, setSns] = useState(0)
-  const move = (step) => setSlide((slide + step + DESKTOP_SLIDES.length) % DESKTOP_SLIDES.length)
+  const [slidePaused, setSlidePaused] = useState(false)
+  const move = (step) => setSlide((current) => (current + step + DESKTOP_SLIDES.length) % DESKTOP_SLIDES.length)
+
+  // 시안 프로토타입: 큰 배너와 SNS 배너는 2초마다 다음 장으로 넘어갑니다.
+  useAutoPlay(() => move(1), 2000, slidePaused)
+  useAutoPlay(() => setSns((current) => (current + 1) % SNS_SLIDES.length), 2000)
 
   return (
     <div className="desktop-main-page">
@@ -93,7 +99,7 @@ function DesktopMainPage() {
               <MainMenuButton className="main-menu-button--desktop" value={tab} onChange={setTab} />
               <div className="desktop-main-page__banner-controls">
                 <PrevNextButtonSet divider onPrev={() => move(-1)} onNext={() => move(1)} />
-                <PauseButton />
+                <PauseButton aria-label={slidePaused ? '배너 자동 넘김 다시 시작' : '배너 자동 넘김 일시정지'} aria-pressed={slidePaused} onClick={() => setSlidePaused(!slidePaused)} />
                 <GridMenuButton label="배너 전체 보기" />
               </div>
             </div>
@@ -109,13 +115,13 @@ function DesktopMainPage() {
             </div>
             <nav className="desktop-main-page__guides" aria-label="시청 안내">
               {GUIDES.map((guide) => (
-                <LifeCycleMenuItem key={guide.label} {...guide} />
+                <LifeCycleMenuItem key={guide.label} {...guide} hover />
               ))}
             </nav>
           </div>
         </div>
 
-        <div className="desktop-main-page__services"><MainServiceList services={SERVICES} /></div>
+        <div className="desktop-main-page__services"><MainServiceList services={SERVICES} hover /></div>
 
         <div className="desktop-main-page__news-row">
           <div className="desktop-main-page__press"><PressList items={PRESS} /></div>
@@ -146,7 +152,7 @@ function DesktopMainPage() {
         </div>
       </div>
 
-      <LifeCycleSection />
+      <LifeCycleSection hoverMotion />
       </div>
 
       <section className="desktop-main-page__events" aria-label="의정부 행사/축제">

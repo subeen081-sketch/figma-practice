@@ -25,3 +25,41 @@
   max-width: none;
   object-fit: contain;
 }
+
+.life-cycle-menu-item__track {
+  position: absolute;
+  inset: 0;
+}
+
+/* Figma 「메뉴목록」 메뉴-기본 → 메뉴-호버(397:4570): 아이콘 줄이 87px 올라가며 호버 아이콘이 나타납니다.
+   (임시) 항목별 호버 그림이 시안에 없어서, 같은 아이콘을 87px 아래에 포인트 색으로 칠해 두었다가 올라오게 합니다. */
+.life-cycle-menu-item--hover .life-cycle-menu-item__track {
+  transition: transform 0.3s ease;
+}
+
+.life-cycle-menu-item__hover {
+  position: absolute;
+  inset: 0;
+  transform: translateY(calc(var(--spacing-32) * 2 + var(--spacing-16) + var(--spacing-6) + 1px));
+}
+
+.life-cycle-menu-item__tint {
+  position: absolute;
+  display: block;
+  background-color: var(--lib-color-primary-2);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.life-cycle-menu-item--hover:hover .life-cycle-menu-item__track,
+.life-cycle-menu-item--hover:focus-visible .life-cycle-menu-item__track {
+  transform: translateY(calc((var(--spacing-32) * 2 + var(--spacing-16) + var(--spacing-6) + 1px) * -1));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .life-cycle-menu-item--hover .life-cycle-menu-item__track {
+    transition: none;
+  }
+}

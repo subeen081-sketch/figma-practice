@@ -56,3 +56,20 @@
   width: calc(var(--spacing-16) + var(--spacing-8));
   height: calc(var(--spacing-16) + var(--spacing-8));
 }
+
+/* 768~1439px: 화면 폭에 맞게 넓히고, 카드는 4열로 보여 줍니다. */
+@media (min-width: 768px) {
+  .grid-page {
+    padding: 0 var(--spacing-16);
+  }
+
+  .grid-page__search,
+  .grid-page__cards {
+    width: 100%;
+  }
+
+  .grid-page__cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: var(--spacing-16);
+  }
+}

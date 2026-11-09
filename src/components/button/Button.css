@@ -45,7 +45,7 @@
 }
 
 /* 데스크탑은 120px × 60px */
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
   .button {
     min-width: calc(var(--spacing-32) + var(--spacing-32) + var(--spacing-32) + var(--spacing-16) + var(--spacing-8));
     min-height: calc(var(--spacing-32) + var(--spacing-16) + var(--spacing-8) + var(--spacing-4));

@@ -3,7 +3,7 @@ import PrevNextButtonSet from '../layout/PrevNextButtonSet'
 import ServiceMenuItem from './ServiceMenuItem'
 import './MainServiceList.css'
 
-function MainServiceList({ services }) {
+function MainServiceList({ services, hover = false }) {
   const listRef = useRef(null)
   const move = (direction) => listRef.current?.scrollBy({ left: direction * listRef.current.clientWidth, behavior: 'smooth' })
 
@@ -17,7 +17,7 @@ function MainServiceList({ services }) {
       </div>
       <div className="main-service-list__items" ref={listRef}>
         {services.map((service) => (
-          <ServiceMenuItem key={service.label} {...service} />
+          <ServiceMenuItem key={service.label} {...service} hover={hover} />
         ))}
       </div>
     </section>

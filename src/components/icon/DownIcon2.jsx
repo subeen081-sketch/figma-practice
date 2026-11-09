@@ -5,7 +5,7 @@ import desktop from '../../assets/icons/down-icon2-desktop.png'
 function DownIcon2({ alt = '', className = '', ...props }) {
   return (
     <picture>
-      <source media="(min-width: 1280px)" srcSet={desktop} />
+      <source media="(min-width: 1440px)" srcSet={desktop} />
       <img src={mobile} alt={alt} className={`down-icon2 ${className}`.trim()} {...props} />
     </picture>
   )

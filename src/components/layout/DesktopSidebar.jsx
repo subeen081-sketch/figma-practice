@@ -17,7 +17,7 @@ function DesktopSidebar({ className = '' }) {
     <aside className={`desktop-sidebar ${className}`.trim()} aria-label="바로가기">
       {ITEMS.map((item) => (
         <div key={item.label} className="desktop-sidebar__item">
-          <LifeCycleMenuItem {...item} />
+          <LifeCycleMenuItem {...item} hover />
         </div>
       ))}
       <button

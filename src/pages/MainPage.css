@@ -367,3 +367,42 @@
   gap: calc(var(--spacing-16) + var(--spacing-10) + var(--spacing-2)) var(--spacing-8);
   padding: calc(var(--spacing-10) + var(--spacing-4)) 0;
 }
+
+/* 768~1439px: 360px 기준 고정 폭을 풀어 화면 폭(좌우 여백 16px)에 맞게 넓힙니다.
+   배경이 있는 정부 배너와 푸터는 화면 끝까지 채웁니다. */
+@media (min-width: 768px) {
+  .main-page__header {
+    padding: 0 var(--spacing-16);
+  }
+
+  .main-page__hero,
+  .main-page__section,
+  .main-page__press,
+  .main-page__news,
+  .main-page__sns,
+  .main-page__events {
+    width: calc(100% - var(--spacing-32));
+  }
+
+  .main-page__search {
+    width: calc(100% - var(--spacing-32));
+  }
+
+  .main-page__news-body strong {
+    max-width: none;
+  }
+
+  /* 시청 안내 아이콘은 넓어진 폭에 고르게 나눠 배치합니다. */
+  .main-page__guides {
+    justify-content: space-around;
+  }
+
+  .main-page__guides > * + * {
+    margin-left: 0;
+  }
+
+  .main-page__event-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: var(--spacing-16);
+  }
+}

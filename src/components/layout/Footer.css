@@ -86,3 +86,10 @@
 .footer__mark img {
   width: calc(var(--spacing-32) * 2 + var(--spacing-16) + var(--spacing-10) + var(--spacing-5) + var(--spacing-2));
 }
+
+/* 768~1439px: 푸터는 화면 끝까지 채웁니다. */
+@media (min-width: 768px) {
+  .footer {
+    width: 100%;
+  }
+}
