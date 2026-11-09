@@ -53,6 +53,17 @@
   -webkit-mask-repeat: no-repeat;
 }
 
+/* 항목별 호버 그림(Figma 「Section 1」 4:80): 정해진 칸 안에서 원본 그림을 잘라 보여 줍니다. */
+.life-cycle-menu-item__hover-icon {
+  position: absolute;
+  overflow: hidden;
+}
+
+.life-cycle-menu-item__box .life-cycle-menu-item__hover-icon img {
+  position: absolute;
+  max-width: none;
+}
+
 .life-cycle-menu-item--hover:hover .life-cycle-menu-item__track,
 .life-cycle-menu-item--hover:focus-visible .life-cycle-menu-item__track {
   transform: translateY(calc((var(--spacing-32) * 2 + var(--spacing-16) + var(--spacing-6) + 1px) * -1));
