@@ -63,6 +63,21 @@ import serviceHoverCar from '../assets/images/service-hover-car.png'
 import serviceHoverParking from '../assets/images/service-hover-parking.png'
 import serviceHoverRail from '../assets/images/service-hover-rail.png'
 import serviceHoverBooking from '../assets/images/service-hover-booking.png'
+// 바로가기(데스크탑 사이드바, 모바일 하단 바) 아이콘
+import guideBooking from '../assets/images/guide-booking.png'
+import guideCustom from '../assets/images/guide-custom.png'
+import guideMyMenu from '../assets/images/guide-my-menu.png'
+// 바로가기 호버 아이콘 (Figma 「Section 2」 6:109)
+import guideHoverBooking from '../assets/images/guide-hover-booking.png'
+import guideHoverCustom from '../assets/images/guide-hover-custom.png'
+import guideHoverMyMenu from '../assets/images/guide-hover-my-menu.png'
+import { cropBox } from './crop'
+// 시청 안내 호버 아이콘 (Figma 「Section 1」 4:80). 데스크탑·모바일 메인이 함께 씁니다.
+import guideHoverBuilding from '../assets/images/guide-hover-building.png'
+import guideHoverComplaint from '../assets/images/guide-hover-complaint.png'
+import guideHoverLocation from '../assets/images/guide-hover-location.png'
+import guideHoverOrganization from '../assets/images/guide-hover-organization.png'
+import guideHoverWork from '../assets/images/guide-hover-work.png'
 
 export const SLIDES = [slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10, slide11, slide12, slide13]
 export const SNS_SLIDES = [sns1, sns2, sns3, sns4, sns5]
@@ -105,4 +120,37 @@ export const NEWS_LIST = [
   { department: '일자리경제과', title: '2026년 10월 중 주요업무계획(일자리경제과)' },
   { department: '여성보육과', title: '2026년 하반기 어린이집 보육교직원 아동학대..' },
   { department: '기후에너지과', title: '취약계층 [동절기 도시가스 공급중단 유예제도]' },
+]
+
+// 시청 안내 항목별 호버 그림: 칸 크기(px), 위쪽 위치(px), Figma 자르기 값 [폭%, 높이%, 왼쪽%, 위%]
+export const GUIDE_HOVER_ICONS = {
+  청사안내: { src: guideHoverBuilding, width: 55, height: 55, top: 2, crop: [143.34, 141.75, -23.49, -26.33] },
+  // 조직도 호버 그림은 칸(56px)보다 길어 아래가 잘리므로 10px 올려 끝까지 보이게 합니다.
+  조직도: { src: guideHoverOrganization, width: 68, height: 69, top: -10 },
+  업무안내: { src: guideHoverWork, width: 50, height: 57, crop: [162.47, 137.5, -33.62, -18.75] },
+  '오시는 길': { src: guideHoverLocation, width: 47, height: 63, crop: [161.9, 117.31, -33.33, -8.65] },
+  민원대기실: { src: guideHoverComplaint, width: 69, height: 66, crop: [123.37, 114.67, -13.23, -7.14] },
+}
+
+// 바로가기 항목: 데스크탑 사이드바와 모바일 하단 고정 바가 함께 씁니다.
+// hoverIcon: 칸 크기(px), 위쪽 위치(px), Figma 자르기 값 [폭%, 높이%, 왼쪽%, 위%]
+export const QUICK_MENU_ITEMS = [
+  {
+    src: guideMyMenu,
+    label: '나만의 메뉴',
+    style: cropBox(40, 47, 14, 0, 0.483, 0.547, 0.224, 0.235),
+    hoverIcon: { src: guideHoverMyMenu, width: 39, height: 51, top: -2, crop: [224.63, 170.9, -58.51, -36.9] },
+  },
+  {
+    src: guideCustom,
+    label: '맞춤형 서비스',
+    style: cropBox(57, 57, 6, -5, 0.683, 0.683, 0.15, 0.15),
+    hoverIcon: { src: guideHoverCustom, width: 57, height: 57, crop: [120.45, 140.48, -20.45, -26.19] },
+  },
+  {
+    src: guideBooking,
+    label: '통합예약',
+    style: cropBox(54, 51, 7, -2, 0.607, 0.533, 0.214, 0.25),
+    hoverIcon: { src: guideHoverBooking, width: 59.681, height: 51, crop: [162.6, 198.07, -51.63, -54.43] },
+  },
 ]

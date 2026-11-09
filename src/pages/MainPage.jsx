@@ -8,11 +8,13 @@ import CityLogo from '../components/layout/CityLogo'
 import Footer from '../components/layout/Footer'
 import GovBanner from '../components/layout/GovBanner'
 import GridMenuButton from '../components/layout/GridMenuButton'
+import MobileQuickBar from '../components/layout/MobileQuickBar'
 import PauseButton from '../components/layout/PauseButton'
 import PrevNextButtonSet from '../components/layout/PrevNextButtonSet'
 import TopBottomButton from '../components/layout/TopBottomButton'
 import EventSectionLabel from '../components/main/EventSectionLabel'
 import LifeCycleMenuItem from '../components/main/LifeCycleMenuItem'
+import LifeCycleSection from '../components/main/LifeCycleSection'
 import MainMenuButton from '../components/main/MainMenuButton'
 import MainServiceList from '../components/main/MainServiceList'
 import MayorOfficeButton from '../components/main/MayorOfficeButton'
@@ -38,14 +40,14 @@ import searchIcon from '../assets/images/search.png'
 import slogan from '../assets/images/slogan.png'
 import { cropBox } from '../data/crop'
 import { MAIN_EVENTS } from '../data/events'
-import { NEWS_LIST, NEWS_TABS, PRESS, SERVICES, SLIDES, SNS_SLIDES } from '../data/main'
+import { GUIDE_HOVER_ICONS, NEWS_LIST, NEWS_TABS, PRESS, SERVICES, SLIDES, SNS_SLIDES } from '../data/main'
 import './Page.css'
 import './MainPage.css'
 
 const box = cropBox
 const GUIDES = [
   { src: guideBuilding, label: '청사안내', style: box(65, 58, 2, -6, 0.867, 0.78, 0.057, 0.067) },
-  { src: guideOrganization, label: '조직도', style: box(65, 69, 2, 0, 0.93, 0.933, 0.07, 0.067) },
+  { src: guideOrganization, label: '조직도', style: box(65, 69, 2, -6, 0.93, 0.933, 0.07, 0.067) },
   { src: guideWork, label: '업무안내', style: box(40, 57, 14, 0, 0.516, 0.783, 0.266, 0.117) },
   { src: guideLocation, label: '오시는 길', style: box(47, 60, 11, 0, 0.679, 0.817, 0.161, 0.083) },
   { src: guideComplaint, label: '민원대기실', style: box(54, 52, 7, 0, 0.803, 0.85, 0.106, 0.1) },
@@ -104,7 +106,7 @@ function MainPage() {
 
         <nav className="main-page__guides" aria-label="시청 안내">
           {GUIDES.map((guide) => (
-            <LifeCycleMenuItem key={guide.label} {...guide} />
+            <LifeCycleMenuItem key={guide.label} {...guide} hover hoverIcon={GUIDE_HOVER_ICONS[guide.label]} />
           ))}
         </nav>
 
@@ -119,7 +121,7 @@ function MainPage() {
         </div>
       </section>
 
-      <div className="main-page__section"><MainServiceList services={SERVICES} /></div>
+      <div className="main-page__section"><MainServiceList services={SERVICES} hover /></div>
       <div className="main-page__press"><PressList items={PRESS} /></div>
 
       <section className="main-page__news" aria-label="새소식">
@@ -145,6 +147,9 @@ function MainPage() {
         <SnsTabs index={sns} onChange={setSns} />
         <SnsBannerSlide slides={SNS_SLIDES} index={sns} />
       </section>
+
+      {/* 모바일 시안이 없어 데스크탑 「메인2영역」을 좁은 화면에 맞게 배치했습니다. */}
+      <LifeCycleSection variant="mobile" hoverMotion />
 
       <section className="main-page__events">
         <div className="main-page__event-label"><EventSectionLabel /></div>
@@ -173,6 +178,7 @@ function MainPage() {
       </section>
 
       <Footer />
+      <MobileQuickBar />
     </div>
   )
 }

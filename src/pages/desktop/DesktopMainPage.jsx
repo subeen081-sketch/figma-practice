@@ -29,11 +29,6 @@ import bentNext from '../../assets/icons/bent-next.png'
 import airQuality from '../../assets/images/air-quality.png'
 import guideBuilding from '../../assets/images/guide-building.png'
 import guideComplaint from '../../assets/images/guide-complaint.png'
-import guideHoverBuilding from '../../assets/images/guide-hover-building.png'
-import guideHoverComplaint from '../../assets/images/guide-hover-complaint.png'
-import guideHoverLocation from '../../assets/images/guide-hover-location.png'
-import guideHoverOrganization from '../../assets/images/guide-hover-organization.png'
-import guideHoverWork from '../../assets/images/guide-hover-work.png'
 import guideLocation from '../../assets/images/guide-location.png'
 import guideOrganization from '../../assets/images/guide-organization.png'
 import guideWork from '../../assets/images/guide-work.png'
@@ -43,15 +38,15 @@ import searchColor from '../../assets/images/search-color.png'
 import slogan from '../../assets/images/slogan.png'
 import { cropBox } from '../../data/crop'
 import { DESKTOP_MAIN_EVENTS, DESKTOP_NEWS, DESKTOP_SLIDES } from '../../data/desktop'
-import { NEWS_TABS, PRESS, SERVICES, SNS_SLIDES } from '../../data/main'
+import { GUIDE_HOVER_ICONS, NEWS_TABS, PRESS, SERVICES, SNS_SLIDES } from '../../data/main'
 import './DesktopMainPage.css'
 
 const GUIDES = [
-  { src: guideBuilding, label: '청사안내', hoverIcon: { src: guideHoverBuilding, width: 55, height: 55, top: 2, crop: [143.34, 141.75, -23.49, -26.33] }, style: cropBox(65, 58, 2, -6, 0.867, 0.78, 0.057, 0.067) },
-  { src: guideOrganization, label: '조직도', hoverIcon: { src: guideHoverOrganization, width: 68, height: 69 }, style: cropBox(65, 69, 2, 0, 0.93, 0.933, 0.07, 0.067) },
-  { src: guideWork, label: '업무안내', hoverIcon: { src: guideHoverWork, width: 50, height: 57, crop: [162.47, 137.5, -33.62, -18.75] }, style: cropBox(40, 57, 14, 0, 0.516, 0.783, 0.266, 0.117) },
-  { src: guideLocation, label: '오시는 길', hoverIcon: { src: guideHoverLocation, width: 47, height: 63, crop: [161.9, 117.31, -33.33, -8.65] }, style: cropBox(47, 60, 11, 0, 0.679, 0.817, 0.161, 0.083) },
-  { src: guideComplaint, label: '민원대기실', hoverIcon: { src: guideHoverComplaint, width: 69, height: 66, crop: [123.37, 114.67, -13.23, -7.14] }, style: cropBox(54, 52, 7, 0, 0.803, 0.85, 0.106, 0.1) },
+  { src: guideBuilding, label: '청사안내', style: cropBox(65, 58, 2, -6, 0.867, 0.78, 0.057, 0.067) },
+  { src: guideOrganization, label: '조직도', style: cropBox(65, 69, 2, -6, 0.93, 0.933, 0.07, 0.067) },
+  { src: guideWork, label: '업무안내', style: cropBox(40, 57, 14, 0, 0.516, 0.783, 0.266, 0.117) },
+  { src: guideLocation, label: '오시는 길', style: cropBox(47, 60, 11, 0, 0.679, 0.817, 0.161, 0.083) },
+  { src: guideComplaint, label: '민원대기실', style: cropBox(54, 52, 7, 0, 0.803, 0.85, 0.106, 0.1) },
 ]
 
 function DesktopMainPage() {
@@ -120,7 +115,7 @@ function DesktopMainPage() {
             </div>
             <nav className="desktop-main-page__guides" aria-label="시청 안내">
               {GUIDES.map((guide) => (
-                <LifeCycleMenuItem key={guide.label} {...guide} hover />
+                <LifeCycleMenuItem key={guide.label} {...guide} hover hoverIcon={GUIDE_HOVER_ICONS[guide.label]} />
               ))}
             </nav>
           </div>

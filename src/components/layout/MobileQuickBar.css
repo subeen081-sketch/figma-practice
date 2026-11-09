@@ -1,0 +1,59 @@
+/* 모바일 하단 고정 바로가기 바 (참고 이미지 「Section 2」 6:105). 값은 모두 tokens.css 변수를 사용합니다.
+   흰 바탕에 항목 3개를 세로 줄로 나누고, 오른쪽 끝에 청록 「맨 위로」 버튼을 둡니다. */
+.mobile-quick-bar {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  height: calc(var(--spacing-32) * 2);
+  /* 아이폰 아래 홈 표시줄 영역만큼 띄웁니다. */
+  padding-bottom: env(safe-area-inset-bottom);
+  background-color: var(--lib-color-main-2);
+  box-shadow: var(--shadow-blur-8);
+}
+
+.mobile-quick-bar__items {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.mobile-quick-bar__items li {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+/* 항목 사이 세로 줄 */
+.mobile-quick-bar__items li + li {
+  border-left: 1px solid var(--lib-color-boder-boder);
+}
+
+.mobile-quick-bar .life-cycle-menu-item {
+  gap: var(--spacing-2);
+  font-size: calc(var(--lib-text-style-head-menu2-font-size) - 2px);
+}
+
+/* 아이콘을 50% 크기로 (호버 때 올라오는 거리도 같은 비율로 줄어듭니다) */
+.mobile-quick-bar .life-cycle-menu-item__box {
+  zoom: 0.5;
+}
+
+.mobile-quick-bar__top {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--spacing-32) * 2);
+  padding: 0;
+  border: 0;
+  background-color: var(--lib-color-primary-2);
+  cursor: pointer;
+}
+
+.mobile-quick-bar__top img {
+  width: calc(var(--spacing-16) + var(--spacing-8));
+  height: calc(var(--spacing-16) + var(--spacing-8));
+}

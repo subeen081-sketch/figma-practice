@@ -1,6 +1,8 @@
 /* Figma 「모바일-메인」(468:9951). 값은 모두 tokens.css 변수를 사용합니다. */
 .main-page {
   gap: var(--spacing-16);
+  /* 하단 고정 바로가기 바(64px)에 마지막 내용이 가리지 않게 */
+  padding-bottom: calc(var(--spacing-32) * 2);
 }
 
 .main-page__header {
@@ -366,6 +368,63 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: calc(var(--spacing-16) + var(--spacing-10) + var(--spacing-2)) var(--spacing-8);
   padding: calc(var(--spacing-10) + var(--spacing-4)) 0;
+}
+
+/* 모바일 메인에서는 시청 안내·주요 서비스 아이콘을 줄여 보여 줍니다(데스크탑은 시안 크기).
+   zoom으로 아이콘 칸 전체를 줄여서, 아이콘 자르기 위치와 호버 때 올라오는 거리도 같은 비율로 줄어듭니다. */
+.main-page__guides {
+  justify-content: space-around;
+  padding: var(--spacing-4) var(--spacing-4) var(--spacing-5);
+}
+
+.main-page__guides > * + * {
+  margin-left: 0;
+}
+
+.main-page__guides .life-cycle-menu-item {
+  gap: var(--spacing-2);
+  font-size: calc(var(--lib-text-style-head-menu2-font-size) - 2px);
+}
+
+.main-page__guides .life-cycle-menu-item__box {
+  zoom: 0.6;
+}
+
+.main-page__section {
+  min-height: 0;
+}
+
+.main-page__section .main-service-list {
+  gap: var(--spacing-16);
+}
+
+.main-page__section .main-service-list__head {
+  align-items: center;
+  padding-top: var(--spacing-32);
+}
+
+.main-page__section .main-service-list__title {
+  font-size: calc(var(--lib-text-style-bold-font-size) * 0.7);
+}
+
+/* 360px 화면에서 4개씩 보이도록 항목 사이 10px */
+.main-page__section .main-service-list__items {
+  gap: var(--spacing-10);
+  height: auto;
+}
+
+.main-page__section .service-menu-item {
+  width: auto;
+  min-width: calc(var(--spacing-32) * 2);
+  gap: var(--spacing-4);
+  font-size: var(--lib-text-style-head-menu2-font-size);
+}
+
+/* 아이콘 칸 높이를 가장 큰 아이콘(민원24, 100px)에 맞춰 글자와의 간격을 줄입니다. */
+.main-page__section .service-menu-item__box {
+  width: calc(var(--spacing-32) * 2 + var(--spacing-16) + var(--spacing-5) + var(--spacing-2));
+  height: calc(var(--spacing-32) * 3 + var(--spacing-4));
+  zoom: 0.7;
 }
 
 /* 768~1439px: 360px 기준 고정 폭을 풀어 화면 폭(좌우 여백 16px)에 맞게 넓힙니다.

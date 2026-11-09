@@ -44,11 +44,12 @@ const PARTICIPATION = [
 ]
 
 // hoverMotion이 있으면 인물에 마우스를 올렸을 때 그림이 위로 올라갑니다(데스크탑 시안).
-function LifeCycleSection({ hoverMotion = false }) {
+// variant="mobile"이면 모바일 메인용 배치(소개 한 줄, 인물 3열, 참여공간 2열)로 보여 줍니다.
+function LifeCycleSection({ hoverMotion = false, variant = 'desktop' }) {
   const [tab, setTab] = useState(0)
 
   return (
-    <section className={`life-cycle-section ${hoverMotion ? 'life-cycle-section--hover' : ''}`.trim()}>
+    <section className={['life-cycle-section', hoverMotion && 'life-cycle-section--hover', variant === 'mobile' && 'life-cycle-section--mobile'].filter(Boolean).join(' ')}>
       <div className="life-cycle-section__intro">
         <span className="life-cycle-section__icon">
           <img src={magnifier} alt="" style={cropBox(140, 97, 0, 0, 0.653, 0.66, 0.164, 0.22)} />
