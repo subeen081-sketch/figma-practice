@@ -11,7 +11,8 @@
   font-family: var(--lib-text-style-footer-menu-font-family);
   font-size: var(--lib-text-style-footer-menu-font-size);
   font-weight: var(--lib-text-style-footer-menu-font-weight);
-  color: var(--lib-color-text-card);
+  /* 글자 색: Figma 변수 Border */
+  color: var(--lib-color-boder-boder);
   white-space: nowrap;
   cursor: pointer;
 }
