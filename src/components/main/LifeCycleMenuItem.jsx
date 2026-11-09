@@ -4,7 +4,7 @@ import './LifeCycleMenuItem.css'
 // 같은 아이콘을 포인트 색으로 칠한 호버 아이콘이 올라옵니다.
 // (임시) 시안에 항목별 호버 그림이 없어서 기본 아이콘의 색만 바꿔 보여 줍니다.
 function LifeCycleMenuItem({ src, label, style, hover = false }) {
-  const tintStyle = { ...style, maskImage: `url(${src})`, WebkitMaskImage: `url(${src})` }
+  const tintStyle = { ...style, maskImage: `url("${src}")`, WebkitMaskImage: `url("${src}")` }
 
   return (
     <a href="#" className={`life-cycle-menu-item ${hover ? 'life-cycle-menu-item--hover' : ''}`.trim()}>

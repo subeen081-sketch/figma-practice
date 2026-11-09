@@ -43,30 +43,50 @@ import serviceCar from '../assets/images/service-car.png'
 import serviceParking from '../assets/images/service-parking.png'
 import serviceRail from '../assets/images/service-rail.png'
 import serviceBooking from '../assets/images/service-booking.png'
+// 주요 서비스 호버 아이콘 (Figma 「아이콘모음2」 3:2). 민원24는 기존 service-hover.png를 씁니다.
+import serviceHoverComplaint24 from '../assets/images/service-hover.png'
+import serviceHoverEvent from '../assets/images/service-hover-event.png'
+import serviceHoverJob from '../assets/images/service-hover-job.png'
+import serviceHoverTv from '../assets/images/service-hover-tv.png'
+import serviceHoverCommunity from '../assets/images/service-hover-community.png'
+import serviceHoverLibrary from '../assets/images/service-hover-library.png'
+import serviceHoverYouthChild from '../assets/images/service-hover-youth-child.png'
+import serviceHoverYouth from '../assets/images/service-hover-youth.png'
+import serviceHoverWomen from '../assets/images/service-hover-women.png'
+import serviceHoverSenior from '../assets/images/service-hover-senior.png'
+import serviceHoverDisabled from '../assets/images/service-hover-disabled.png'
+import serviceHoverWater from '../assets/images/service-hover-water.png'
+import serviceHoverMap from '../assets/images/service-hover-map.png'
+import serviceHoverStats from '../assets/images/service-hover-stats.png'
+import serviceHoverWaterFee from '../assets/images/service-hover-water-fee.png'
+import serviceHoverCar from '../assets/images/service-hover-car.png'
+import serviceHoverParking from '../assets/images/service-hover-parking.png'
+import serviceHoverRail from '../assets/images/service-hover-rail.png'
+import serviceHoverBooking from '../assets/images/service-hover-booking.png'
 
 export const SLIDES = [slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10, slide11, slide12, slide13]
 export const SNS_SLIDES = [sns1, sns2, sns3, sns4, sns5]
 
 export const SERVICES = [
-  { src: serviceComplaint24, label: '민원24' },
-  { src: serviceEvent, label: '행사 ·축제 일정' },
-  { src: serviceJob, label: '일자리' },
-  { src: serviceTv, label: '의정부TV' },
-  { src: serviceCommunity, label: '동주민센터' },
-  { src: serviceLibrary, label: '도서관' },
-  { src: serviceYouthChild, label: '아동 · 청소년' },
-  { src: serviceYouth, label: '청년' },
-  { src: serviceWomen, label: '여성' },
-  { src: serviceSenior, label: '노인' },
-  { src: serviceDisabled, label: '장애인' },
-  { src: serviceWater, label: '맑은물 사업소' },
-  { src: serviceMap, label: '생활지도' },
-  { src: serviceStats, label: '통계' },
-  { src: serviceWaterFee, label: '수도요금' },
-  { src: serviceCar, label: '차량등록' },
-  { src: serviceParking, label: '주정차단속' },
-  { src: serviceRail, label: '경전철' },
-  { src: serviceBooking, label: '통합예약' },
+  { src: serviceComplaint24, hoverSrc: serviceHoverComplaint24, hoverInset: true, label: '민원24' },
+  { src: serviceEvent, hoverSrc: serviceHoverEvent, label: '행사 ·축제 일정' },
+  { src: serviceJob, hoverSrc: serviceHoverJob, label: '일자리' },
+  { src: serviceTv, hoverSrc: serviceHoverTv, label: '의정부TV' },
+  { src: serviceCommunity, hoverSrc: serviceHoverCommunity, label: '동주민센터' },
+  { src: serviceLibrary, hoverSrc: serviceHoverLibrary, label: '도서관' },
+  { src: serviceYouthChild, hoverSrc: serviceHoverYouthChild, label: '아동 · 청소년' },
+  { src: serviceYouth, hoverSrc: serviceHoverYouth, label: '청년' },
+  { src: serviceWomen, hoverSrc: serviceHoverWomen, label: '여성' },
+  { src: serviceSenior, hoverSrc: serviceHoverSenior, label: '노인' },
+  { src: serviceDisabled, hoverSrc: serviceHoverDisabled, label: '장애인' },
+  { src: serviceWater, hoverSrc: serviceHoverWater, label: '맑은물 사업소' },
+  { src: serviceMap, hoverSrc: serviceHoverMap, label: '생활지도' },
+  { src: serviceStats, hoverSrc: serviceHoverStats, label: '통계' },
+  { src: serviceWaterFee, hoverSrc: serviceHoverWaterFee, label: '수도요금' },
+  { src: serviceCar, hoverSrc: serviceHoverCar, label: '차량등록' },
+  { src: serviceParking, hoverSrc: serviceHoverParking, label: '주정차단속' },
+  { src: serviceRail, hoverSrc: serviceHoverRail, label: '경전철' },
+  { src: serviceBooking, hoverSrc: serviceHoverBooking, label: '통합예약' },
 ]
 
 export const PRESS = [

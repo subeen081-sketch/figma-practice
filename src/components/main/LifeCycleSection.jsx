@@ -1,4 +1,15 @@
 import { useState } from 'react'
+import iconAnonymous from '../../assets/icons/participation-anonymous.svg'
+import iconBudget from '../../assets/icons/participation-budget.svg'
+import iconFreeBoard from '../../assets/icons/participation-free-board.svg'
+import iconHonoraryAuditor from '../../assets/icons/participation-honorary-auditor.svg'
+import iconPencil from '../../assets/icons/participation-pencil.svg'
+import iconPraise from '../../assets/icons/participation-praise.svg'
+import iconProvinceNews from '../../assets/icons/participation-province-news.svg'
+import iconPublicReport from '../../assets/icons/participation-public-report.svg'
+import iconSinmungo from '../../assets/icons/participation-sinmungo.svg'
+import iconSuggestion from '../../assets/icons/participation-suggestion.svg'
+import iconSurvey from '../../assets/icons/participation-survey.svg'
 import lifeInfant from '../../assets/images/life-infant.png'
 import lifeMiddle from '../../assets/images/life-middle.png'
 import lifeWomen from '../../assets/images/life-women.png'
@@ -16,6 +27,21 @@ const PEOPLE = [
   { src: lifeWomen, label: '여성' },
 ]
 const TABS = ['생애주기별서비스', '참여공간']
+// Figma 「메인2영역」 참여공간페이지(459:8684)의 버튼 12개
+const PARTICIPATION = [
+  { label: '제안마당', icon: iconPencil },
+  { label: '설문조사', icon: iconSurvey },
+  { label: '공직/선거비리 익명신고', icon: iconAnonymous },
+  { label: '예산낭비신고', icon: iconBudget },
+  { label: '시정에 바란다', icon: iconSuggestion },
+  { label: '도정소식', icon: iconProvinceNews },
+  { label: '부동산실거래 위반신고', icon: iconPencil },
+  { label: '명예시민감사관', icon: iconHonoraryAuditor },
+  { label: '칭찬합시다', icon: iconPraise },
+  { label: '자유게시판', icon: iconFreeBoard },
+  { label: '공익신고', icon: iconPublicReport },
+  { label: '국민신문고', icon: iconSinmungo },
+]
 
 // hoverMotion이 있으면 인물에 마우스를 올렸을 때 그림이 위로 올라갑니다(데스크탑 시안).
 function LifeCycleSection({ hoverMotion = false }) {
@@ -31,7 +57,7 @@ function LifeCycleSection({ hoverMotion = false }) {
           지금 필요한<br /><span>의정부 정보</span><br />모두 여기에!
         </h2>
       </div>
-      <div className="life-cycle-section__card">
+      <div className={`life-cycle-section__card ${tab === 1 ? 'life-cycle-section__card--participation' : ''}`.trim()}>
         <div className="life-cycle-section__tabs">
           {TABS.map((label, index) => (
             <button
@@ -45,16 +71,34 @@ function LifeCycleSection({ hoverMotion = false }) {
             </button>
           ))}
         </div>
-        <ul className="life-cycle-section__people">
-          {PEOPLE.map((person) => (
-            <li key={person.label}>
-              <a href="#">
-                <img src={person.src} alt="" />
-                {person.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        {tab === 0 ? (
+          <ul className="life-cycle-section__people">
+            {PEOPLE.map((person) => (
+              <li key={person.label}>
+                <a href="#">
+                  <img src={person.src} alt="" />
+                  {person.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <ul className="life-cycle-section__links">
+            {PARTICIPATION.map((item) => (
+              <li key={item.label}>
+                <a href="#">
+                  <span className="life-cycle-section__link-icon">
+                    <span className="life-cycle-section__link-track">
+                      <img src={item.icon} alt="" />
+                      <span className="life-cycle-section__link-hover" style={{ maskImage: `url("${item.icon}")`, WebkitMaskImage: `url("${item.icon}")` }} />
+                    </span>
+                  </span>
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </section>
   )

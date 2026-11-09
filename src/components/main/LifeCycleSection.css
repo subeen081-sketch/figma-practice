@@ -115,3 +115,89 @@
     transition: none;
   }
 }
+
+/* Figma 「메인2영역」 참여공간페이지(459:8684): 탭 아래 44px 띄우고 버튼 12개를 4열로 놓습니다. */
+.life-cycle-section__card--participation {
+  gap: calc(var(--spacing-32) + var(--spacing-10) + var(--spacing-2));
+}
+
+.life-cycle-section__links {
+  display: grid;
+  grid-template-columns: repeat(4, calc(var(--spacing-32) * 6 + var(--spacing-16) + var(--spacing-5) + var(--spacing-2)));
+  justify-content: space-between;
+  row-gap: calc(var(--spacing-16) + var(--spacing-4));
+}
+
+/* Figma 「제안마당」 기본(459:8586): 흰 바탕, 청록 테두리, 아이콘과 글자 사이 2px */
+.life-cycle-section__links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  min-height: calc(var(--spacing-32) * 2 + var(--spacing-2));
+  padding: var(--spacing-16) var(--spacing-4);
+  border: 1px solid var(--lib-color-primary-2);
+  border-radius: var(--lib-radius-s);
+  background-color: var(--lib-color-main-2);
+  font-family: var(--lib-text-style-main-menu-font-family);
+  font-size: var(--lib-text-style-main-menu-font-size);
+  font-weight: var(--lib-text-style-main-menu-font-weight);
+  line-height: var(--lib-text-style-main-menu-line-height);
+  letter-spacing: var(--lib-text-style-main-menu-letter-spacing);
+  /* 시안: 청록 글자 위에 검정 20%를 겹친 색 */
+  color: color-mix(in srgb, var(--lib-color-primary-2) 80%, black);
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.life-cycle-section__link-icon {
+  position: relative;
+  flex-shrink: 0;
+  width: calc(var(--spacing-16) + var(--spacing-8));
+  height: calc(var(--spacing-16) + var(--spacing-8));
+  overflow: hidden;
+}
+
+.life-cycle-section__link-track {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.3s ease;
+}
+
+.life-cycle-section__link-track img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* 호버 아이콘: 같은 모양을 흰색으로 칠해 아이콘 아래(44px)에 둡니다. */
+.life-cycle-section__link-hover {
+  position: absolute;
+  top: calc(var(--spacing-32) + var(--spacing-10) + var(--spacing-2));
+  left: 0;
+  width: 100%;
+  height: calc(var(--spacing-16) + var(--spacing-8));
+  background-color: var(--lib-color-main-2);
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+
+/* Figma 「제안마당」 호버(459:8592): 진한 청록 바탕, 흰 글자, 아이콘 줄이 45px 올라갑니다. */
+.life-cycle-section__links a:hover,
+.life-cycle-section__links a:focus-visible {
+  background-color: var(--lib-color-primary-1);
+  color: var(--lib-color-text-card);
+  text-decoration: none;
+}
+
+.life-cycle-section__links a:hover .life-cycle-section__link-track,
+.life-cycle-section__links a:focus-visible .life-cycle-section__link-track {
+  transform: translateY(calc((var(--spacing-32) + var(--spacing-10) + var(--spacing-2) + 1px) * -1));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .life-cycle-section__links a,
+  .life-cycle-section__link-track {
+    transition: none;
+  }
+}
