@@ -6,19 +6,34 @@
   overflow: hidden;
 }
 
+/* 메뉴 6개를 가로 3개 × 세로 2줄로 놓습니다. */
 .footer__menus {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   padding: var(--spacing-4) calc(var(--spacing-4) + var(--spacing-2) + 1px);
   background-color: var(--lib-color-footer-footer);
 }
 
-.footer__menus > :nth-child(odd) {
+/* 줄의 마지막 칸(3번째)을 빼고 오른쪽에 세로 줄 */
+.footer__menus > :not(:nth-child(3n)) {
   border-right: 1px solid var(--lib-color-boder-boder);
 }
 
-.footer__menus > :nth-child(-n + 4) {
+/* 첫 줄 3칸 아래에 가로 줄 */
+.footer__menus > :nth-child(-n + 3) {
   border-bottom: 1px solid var(--lib-color-boder-boder);
+}
+
+/* 칸이 좁아 긴 이름(패밀리 사이트, 관련기관 사이트)은 단어 단위로 두 줄로 나눕니다. */
+.footer__menus .footer-menu-item {
+  gap: var(--spacing-4);
+  /* 칸 높이 44px(누르기 쉬운 최소 크기). 두 줄 이름도 들어가게 줄 간격을 좁힙니다. */
+  min-height: calc(var(--spacing-32) + var(--spacing-10) + var(--spacing-2));
+  padding: var(--spacing-4) var(--spacing-8);
+  line-height: 1.2;
+  white-space: normal;
+  word-break: keep-all;
+  text-align: left;
 }
 
 .footer__links {
@@ -87,9 +102,30 @@
   width: calc(var(--spacing-32) * 2 + var(--spacing-16) + var(--spacing-10) + var(--spacing-5) + var(--spacing-2));
 }
 
-/* 768~1439px: 푸터는 화면 끝까지 채웁니다. */
+/* 768~1439px: 푸터는 화면 끝까지 채우고, 메뉴는 3칸 2줄로 표시합니다. */
 @media (min-width: 768px) {
   .footer {
     width: 100%;
+  }
+
+  .footer__menus {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 var(--spacing-16);
+  }
+
+  .footer__menus > :nth-child(odd) {
+    border-right: 0;
+  }
+
+  .footer__menus > :nth-child(-n + 4) {
+    border-bottom: 0;
+  }
+
+  .footer__menus > :not(:nth-child(3n)) {
+    border-right: 1px solid var(--lib-color-boder-boder);
+  }
+
+  .footer__menus > :nth-child(-n + 3) {
+    border-bottom: 1px solid var(--lib-color-boder-boder);
   }
 }

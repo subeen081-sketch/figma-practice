@@ -31,3 +31,19 @@
   color: var(--lib-color-text-primary);
   white-space: nowrap;
 }
+
+/* 768~1439px: 이전·멈춤·다음 버튼과 배너모음 버튼을 한 줄로 놓습니다. */
+@media (min-width: 768px) {
+  .footer-banner-menu {
+    padding-left: var(--spacing-16);
+  }
+
+  .footer-banner-menu__controls {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .footer-banner-menu__buttons {
+    gap: var(--spacing-4);
+  }
+}
